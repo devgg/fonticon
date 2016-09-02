@@ -148,6 +148,11 @@ input:focus {
 #size {
     padding-left: 0;
     border: none;
+    color: white;
+}
+
+#size:focus {
+    box-shadow: none;
 }
 
 
