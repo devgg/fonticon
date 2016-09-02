@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Favicon Generdsffdsfsdfator</title>
+    <script src="https://use.fontawesome.com/ba0aee172c.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="css/rangeslider.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel='stylesheet' href='lib/spectrum.css'/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="lib/ga.js"></script>
+    <script src='lib/spectrum.js'></script>
+    <script src="lib/canvas-to-blob.min.js"></script>
+    <script src="lib/FileSaver.min.js"></script>
+    <script src="lib/canvas-to-favicon.js"></script>
+    <script src="js/icons.js"></script>
+    <script src="js/image.js"></script>
+</head>
+<body>
+<div id="left">
+    <div id="controls_container">
+        <canvas id="canvas"></canvas>
+        <div id="colors">
+            <div class="color_input">
+                <div class="color_button_container">
+                    <div id="color" class="color_button"></div>
+                </div>
+                <input id="color_text" class="color_text" type="text" value="#ffffff">
+            </div>
+
+            <div class="color_input">
+                <div class="color_button_container">
+                    <div id="background_color" class="color_button"></div>
+                </div>
+                <input id="background_color_text" class="color_text" type="text" value="#f85032">
+            </div>
+        </div>
+        <input id="size" type="range" min="10" max="100" step="1" value="55" data-orientation="horizontal">
+        <input id="search" type="text" name="search" autocomplete="off" placeholder="Search...">
+        <div id="download">download</div>
+    </div>
+</div>
+<div id="right">
+</div>
+</body>
+</html>
