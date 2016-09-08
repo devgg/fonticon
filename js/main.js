@@ -6,6 +6,13 @@ function FASymbol(name, id, unicode, $icon) {
 }
 
 $(window).on('load', function () {
+    var $color = $("#color");
+    var $color_text = $("#color_text");
+    var $background_color = $("#background_color");
+    var $background_color_text = $("#background_color_text");
+    var $search = $("#search");
+    var $right = $('#right');
+    var $size = $("#size");
 
     var symbol = "\uf004";
     var canvas = document.getElementById('canvas');
@@ -13,48 +20,29 @@ $(window).on('load', function () {
     canvas.width = sideLength;
     canvas.height = sideLength;
     var ctx = canvas.getContext('2d');
-    draw();
+    var symbols = [];
 
 
-    $("#size").on("input", draw);
+    $size.on("input", draw);
+    $color_text.on("input", updateColor.bind(updateColor, $color, $color_text, false));
+    $background_color_text.on("input", updateColor.bind(updateColor, $background_color, $background_color_text, false));
 
-    $("#color").spectrum({
+    $color.spectrum({
         color: "#ffffff",
         showButtons: false,
         showAlpha: true,
-        //change: updateBorders,
-        move: function(color) {
-            var rgba = colorToRgba(color);
-            $(this).css("background-color", rgba);
-            $("#color_text").val(rgba);
-            draw();
-        }
+        move: updateColor.bind(updateColor, $color, $color_text, true)
     });
 
-    $("#background_color").spectrum({
+    $background_color.spectrum({
         color: "#f85032",
         showButtons: false,
         showAlpha: true,
-        //change: updateBorders,
-        move: function(color) {
-            var rgba = colorToRgba(color);
-            $(this).css("background-color", rgba);
-            $("#background_color_text").val(rgba);
-            draw();
-        }
+        move: updateColor.bind(updateColor, $background_color, $background_color_text, true)
     });
 
-    function colorToRgba(color) {
-        return "rgba("
-            + color.toRgb().r  + ", "
-            + color.toRgb().g  + ", "
-            + color.toRgb().b  + ", "
-            + color.toRgb().a  + ")";
-    }
-
-    var symbols = [];
-    $("#search").on("input", function () {
-        var phrase = $("#search").val().toLowerCase();
+    $search.on("input", function () {
+        var phrase = $search.val().toLowerCase();
         for (var i = 0; i < symbols.length; i++) {
             if (symbols[i].id.indexOf(phrase) !== -1) {
                 symbols[i].$icon.parent().show();
@@ -70,7 +58,11 @@ $(window).on('load', function () {
         });
     });
 
-    var $right = $('#right');
+    $(".icon").on("click", function () {
+        symbol = window.getComputedStyle($(this).children().get()[0], ':before').content.substring(1, 2);
+        draw();
+    });
+
     $.each(icons, function (index, icon) {
         var $iconOuter = $("<div>").addClass("icon_outer");
         var $icon = $("<div>").addClass("icon").append($('<i class="fa fa-' + icon.id + '"></i>'));
@@ -80,38 +72,55 @@ $(window).on('load', function () {
 
         symbols.push(new FASymbol(icon.name, icon.id, icon.unicode, $icon));
     });
+    draw();
 
-    $(".icon").on("click", function () {
-        symbol = window.getComputedStyle($(this).children().get()[0], ':before').content.substring(1, 2);
+    function updateColor($color, $color_text, fromPicker) {
+        if (!fromPicker) {
+            $color.spectrum("set", $color_text.val());
+        }
+        var rgba = colorToRgba($color.spectrum("get"));
+        $color.css("background-color", rgba);
+        if (fromPicker) {
+            $color_text.val(rgba);
+        }
         draw();
-    });
+    }
+
+    function colorToRgba(color) {
+        return "rgba("
+            + color.toRgb().r + ", "
+            + color.toRgb().g + ", "
+            + color.toRgb().b + ", "
+            + color.toRgb().a + ")";
+    }
 
     function draw() {
         if (sideLength > 0) {
-            var color = $("#color_text").val();
-            var backgroundColor = $("#background_color_text").val();
             var i = sideLength;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = backgroundColor;
+            ctx.fillStyle = $background_color_text.val();
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            ctx.textAlign = "center";
-            ctx.textBaseline = "middle";
-            do {
-                ctx.font = i + "px FontAwesome";
-                i--;
-            } while (ctx.measureText(symbol).width > sideLength);
-            ctx.font = (i * ($("#size").val() / 100)) + "px FontAwesome";
 
-
+            setFontSize();
             ctx.fillStyle = "rgba(0, 0, 0, 1)";
             ctx.globalCompositeOperation = "destination-out";
             ctx.fillText(symbol, sideLength / 2, sideLength / 2);
-            ctx.fillStyle = color;
+            ctx.fillStyle = $color_text.val();
             ctx.globalCompositeOperation = "source-over";
             ctx.fillText(symbol, sideLength / 2, sideLength / 2);
             canvasToFavicon(canvas);
         }
+    }
+
+    function setFontSize() {
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        do {
+            ctx.font = i + "px FontAwesome";
+            i--;
+        } while (ctx.measureText(symbol).width > sideLength);
+        ctx.font = (i * ($size.val() / 100)) + "px FontAwesome";
     }
 });
 
