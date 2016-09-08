@@ -14,6 +14,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 50vw;
 }
 
@@ -39,6 +40,7 @@ body {
     align-items: center;
     width: 30vw;
     max-width: 500px;
+    flex-grow: 1;
 }
 
 
@@ -176,8 +178,6 @@ input:focus {
     opacity: 0.5;
 }
 
-
-
 #colors {
     display: flex;
     justify-content: space-between;
@@ -192,8 +192,6 @@ input:focus {
     width: 47%;
     min-width: 150px;
 }
-
-
 
 .color_button_container,
 .color_button {
@@ -228,3 +226,25 @@ input:focus {
 #background_color {
     background-color: #f85032;
 }
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: #f85032;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#footer > i {
+    font-size: 20px;
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+#footer:visited {
+    color: #f85032;
+}
+

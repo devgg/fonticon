@@ -60,7 +60,6 @@ $(window).on('load', function () {
             });
         });
 
-
         $.each(icons, function (index, icon) {
             var $iconOuter = $("<div>").addClass("icon_outer");
             var $icon = $("<div>").addClass("icon").append($('<i class="fa fa-' + icon.id + '"></i>'));
