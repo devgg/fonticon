@@ -1,4 +1,4 @@
-# [FontIcon](gauger.io/fonticon)
+# [FontIcon](http://gauger.io/fonticon)
 
 Tool for creating favicons and images from [Font Awesome](http://fontawesome.io/) icons.
 
