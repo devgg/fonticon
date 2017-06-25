@@ -43,16 +43,7 @@ $(window).on('load', function () {
             move: updateColor.bind(updateColor, $background_color, $background_color_text, true)
         });
 
-        $search.on("input", function () {
-            var phrase = $search.val().toLowerCase();
-            for (var i = 0; i < symbols.length; i++) {
-                if (symbols[i].id.indexOf(phrase) !== -1) {
-                    symbols[i].$icon.parent().show();
-                } else {
-                    symbols[i].$icon.parent().hide();
-                }
-            }
-        });
+        initSearch($search, $right);
 
         $("#download").on("click", function () {
             canvas.toBlob(function (blob) {
@@ -61,8 +52,10 @@ $(window).on('load', function () {
         });
 
         $.each(icons, function (index, icon) {
-            var $iconOuter = $("<div>").addClass("icon_outer");
-            var $icon = $("<div>").addClass("icon").append($('<i class="fa fa-' + icon.id + '"></i>'));
+            var $iconOuter = $("<div>").addClass("icon_outer").data("id", icon.id);
+            var $icon = $("<div>")
+                    .addClass("icon")
+                    .append($('<i class="fa fa-' + icon.id + '"></i>'));
             $icon.append($("<div>").addClass("icon_text").text(icon.id));
             $iconOuter.append($icon);
             $right.append($iconOuter);
@@ -79,6 +72,39 @@ $(window).on('load', function () {
         draw();
     }
 
+    function initSearch($search, $right) {
+        var options = {
+            id: "id",
+            shouldSort: true,
+            threshold: 0.3,
+            location: 0,
+            distance: 100,
+            maxPatternLength: 32,
+            minMatchCharLength: 1,
+            keys: [
+                "name",
+                "filter"
+            ]
+        };
+        var fuse = new Fuse(icons, options);
+        $search.on("input", function () {
+            var query = $search.get(0).value;
+            var result = fuse.search(query);
+            $right.children().hide();
+            $right.children().filter(function(index, element) {
+                return query == "" || result.indexOf($(element).data("id")) != -1;
+            }).show();
+            if (result.length == 0 && query != "") {
+                tinysort($right.children());
+            } else if (result.length > 0) {
+                tinysort($right.children(), {
+                    sortFunction: function(a, b) {
+                        return result.indexOf($(a.elm).data("id")) - result.indexOf($(b.elm).data("id"));
+                    }
+                });
+            }
+        })
+    }
 
     function updateColor($color, $color_text, fromPicker) {
         if (!fromPicker) {
