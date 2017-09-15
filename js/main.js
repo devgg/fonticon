@@ -13,8 +13,10 @@ $(window).on('load', function () {
     var $search = $("#search");
     var $right = $('#right');
     var $size = $("#size");
+	var $stackedSize = $("#stackedSize")
 
     var symbol = "\uf004";
+	var stackedSymbol = undefined;
     var canvas = document.getElementById('canvas');
     var sideLength = 1024;
     canvas.width = sideLength;
@@ -27,6 +29,8 @@ $(window).on('load', function () {
 
     function initialize() {
         $size.on("input", draw);
+		$stackedSize.on("input", draw);
+		$stackedSize.hide();
         $color_text.on("input", updateColor.bind(updateColor, $color, $color_text, false));
         $background_color_text.on("input", updateColor.bind(updateColor, $background_color, $background_color_text, false));
         $color.spectrum({
@@ -50,7 +54,15 @@ $(window).on('load', function () {
                 saveAs(blob, "favicon.png");
             });
         });
-
+		
+		$("#stacked").click(function() {
+            if (this.checked) {
+                $stackedSize.show();
+            } else {
+                $stackedSize.hide();
+            }
+        });
+ 
         $.each(icons, function (index, icon) {
             var $iconOuter = $("<div>").addClass("icon_outer").data("id", icon.id);
             var $icon = $("<div>")
@@ -65,7 +77,13 @@ $(window).on('load', function () {
 
 
         $(".icon").on("click", function () {
-            symbol = window.getComputedStyle($(this).children().get()[0], ':before').content.substring(1, 2);
+            var selectedSymbol = window.getComputedStyle($(this).children().get()[0], ':before').content.substring(1, 2);
+            if ($("#stacked")[0].checked) {
+                stackedSymbol = selectedSymbol;
+            } else {
+                symbol = selectedSymbol;
+                stackedSymbol = undefined;
+            }
             draw();
         });
 
@@ -132,24 +150,31 @@ $(window).on('load', function () {
             ctx.fillStyle = $background_color_text.val();
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            setFontSize();
+            setFontSize(1);
             ctx.fillStyle = "rgba(0, 0, 0, 1)";
             ctx.globalCompositeOperation = "destination-out";
             ctx.fillText(symbol, sideLength / 2, sideLength / 2);
             ctx.fillStyle = $color_text.val();
             ctx.globalCompositeOperation = "source-over";
             ctx.fillText(symbol, sideLength / 2, sideLength / 2);
+            if (stackedSymbol) {
+                ctx.save();
+                setFontSize($stackedSize.val() / 10);
+                ctx.globalCompositeOperation = "xor";                                
+                ctx.fillText(stackedSymbol, sideLength / 2, sideLength / 2);
+                ctx.restore();
+            }
             canvasToFavicon(canvas);
         }
     }
 
-    function setFontSize() {
+    function setFontSize(scale) {
         var i = sideLength;
         do {
             ctx.font = i + "px FontAwesome";
             i--;
         } while (ctx.measureText(symbol).width > sideLength);
-        ctx.font = (i * ($size.val() / 100)) + "px FontAwesome";
+        ctx.font = (scale * i * ($size.val() / 100)) + "px FontAwesome";
     }
 });
 

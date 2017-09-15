@@ -147,13 +147,13 @@ input:focus {
     box-shadow: 0 0 7px #f85032;
 }
 
-#size {
+#size, #stackedSize {
     padding-left: 0;
     border: none;
     color: white;
 }
 
-#size:focus {
+#size:focus, #stackedSize:focus {
     box-shadow: none;
 }
 
