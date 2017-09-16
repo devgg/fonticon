@@ -18,11 +18,15 @@
         display: none;
     }
 
-    #colors {
+    #colors, .stack_container {
         width: 80vw;
         justify-content: center;
         flex-direction: column;
         align-items: center;
+    }
+
+    .stack_input {
+        width: 100px;
     }
 
     .color_input {

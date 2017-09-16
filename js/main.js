@@ -13,10 +13,10 @@ $(window).on('load', function () {
     var $search = $("#search");
     var $right = $('#right');
     var $size = $("#size");
-	var $stackedSize = $("#stackedSize")
+	  var $stackedSize = $("#stackedSize")
 
     var symbol = "\uf004";
-	var stackedSymbol = undefined;
+	  var stackedSymbol = undefined;
     var canvas = document.getElementById('canvas');
     var sideLength = 1024;
     canvas.width = sideLength;
@@ -29,23 +29,25 @@ $(window).on('load', function () {
 
     function initialize() {
         $size.on("input", draw);
-		$stackedSize.on("input", draw);
-		$stackedSize.hide();
+		    $stackedSize.on("input", draw);
+		    $stackedSize.hide();
         $color_text.on("input", updateColor.bind(updateColor, $color, $color_text, false));
         $background_color_text.on("input", updateColor.bind(updateColor, $background_color, $background_color_text, false));
         $color.spectrum({
-            color: "#ffffff",
+            color: "#f85032",
             showButtons: false,
             showAlpha: true,
             move: updateColor.bind(updateColor, $color, $color_text, true)
         });
 
         $background_color.spectrum({
-            color: "#f85032",
+            color: "rgba(255,255,255,0)",
             showButtons: false,
             showAlpha: true,
             move: updateColor.bind(updateColor, $background_color, $background_color_text, true)
         });
+        updateColor($color, $color_text, false);
+        updateColor($background_color, $background_color_text, false);
 
         initSearch($search, $right);
 
@@ -54,15 +56,15 @@ $(window).on('load', function () {
                 saveAs(blob, "favicon.png");
             });
         });
-		
-		$("#stacked").click(function() {
+
+		    $("#stacked").click(function() {
             if (this.checked) {
                 $stackedSize.show();
             } else {
                 $stackedSize.hide();
             }
         });
- 
+
         $.each(icons, function (index, icon) {
             var $iconOuter = $("<div>").addClass("icon_outer").data("id", icon.id);
             var $icon = $("<div>")
@@ -160,7 +162,7 @@ $(window).on('load', function () {
             if (stackedSymbol) {
                 ctx.save();
                 setFontSize($stackedSize.val() / 10);
-                ctx.globalCompositeOperation = "xor";                                
+                ctx.globalCompositeOperation = "xor";
                 ctx.fillText(stackedSymbol, sideLength / 2, sideLength / 2);
                 ctx.restore();
             }
