@@ -62,6 +62,8 @@ $(window).on('load', function () {
                 $stackedSize.show();
             } else {
                 $stackedSize.hide();
+                stackedSymbol = undefined;
+                draw();
             }
         });
 
