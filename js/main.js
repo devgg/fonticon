@@ -16,7 +16,8 @@ $(window).on('load', function () {
 	  var $stackedSize = $("#stackedSize")
 
     var symbol = "\uf004";
-	  var stackedSymbol = undefined;
+	  var stackedSelected = false;
+	  var stackedSymbol;
     var canvas = document.getElementById('canvas');
     var sideLength = 1024;
     canvas.width = sideLength;
@@ -58,13 +59,9 @@ $(window).on('load', function () {
         });
 
 		    $("#stacked").click(function() {
-            if (this.checked) {
-                $stackedSize.show();
-            } else {
-                $stackedSize.hide();
-                stackedSymbol = undefined;
-                draw();
-            }
+            stackedSelected = this.checked;
+            this.checked ? $stackedSize.show() : $stackedSize.hide();
+            draw();
         });
 
         $.each(icons, function (index, icon) {
@@ -82,11 +79,10 @@ $(window).on('load', function () {
 
         $(".icon").on("click", function () {
             var selectedSymbol = window.getComputedStyle($(this).children().get()[0], ':before').content.substring(1, 2);
-            if ($("#stacked")[0].checked) {
+            if (stackedSelected) {
                 stackedSymbol = selectedSymbol;
             } else {
                 symbol = selectedSymbol;
-                stackedSymbol = undefined;
             }
             draw();
         });
@@ -154,16 +150,16 @@ $(window).on('load', function () {
             ctx.fillStyle = $background_color_text.val();
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            setFontSize(1);
+            setFontSize(symbol, $size);
             ctx.fillStyle = "rgba(0, 0, 0, 1)";
             ctx.globalCompositeOperation = "destination-out";
             ctx.fillText(symbol, sideLength / 2, sideLength / 2);
             ctx.fillStyle = $color_text.val();
             ctx.globalCompositeOperation = "source-over";
             ctx.fillText(symbol, sideLength / 2, sideLength / 2);
-            if (stackedSymbol) {
+            if (stackedSelected && stackedSymbol) {
                 ctx.save();
-                setFontSize($stackedSize.val() / 10);
+                setFontSize(stackedSymbol, $stackedSize);
                 ctx.globalCompositeOperation = "xor";
                 ctx.fillText(stackedSymbol, sideLength / 2, sideLength / 2);
                 ctx.restore();
@@ -172,13 +168,13 @@ $(window).on('load', function () {
         }
     }
 
-    function setFontSize(scale) {
+    function setFontSize(symbol, $size) {
         var i = sideLength;
         do {
             ctx.font = i + "px FontAwesome";
             i--;
         } while (ctx.measureText(symbol).width > sideLength);
-        ctx.font = (scale * i * ($size.val() / 100)) + "px FontAwesome";
+        ctx.font = (i * ($size.val() / 100)) + "px FontAwesome";
     }
 });
 
