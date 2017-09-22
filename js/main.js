@@ -13,11 +13,11 @@ $(window).on('load', function () {
     var $search = $("#search");
     var $right = $('#right');
     var $size = $("#size");
-	  var $stackedSize = $("#stackedSize")
+	var $stackedSize = $("#stackedSize")
 
     var symbol = "\uf004";
-	  var stackedSelected = false;
-	  var stackedSymbol;
+	var stackedSelected = false;
+	var stackedSymbol = "\uf004";
     var canvas = document.getElementById('canvas');
     var sideLength = 1024;
     canvas.width = sideLength;
