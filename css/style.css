@@ -147,13 +147,39 @@ input:focus {
     box-shadow: 0 0 7px #f85032;
 }
 
-#size {
+input[type=checkbox] {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  visibility: hidden;
+  font-size: 1.3em;
+  padding: 0;
+  margin-right: 10px;
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+input[type=checkbox]:before {
+    content: '\f096';
+    visibility: visible;
+}
+
+input[type=checkbox]:checked:before{
+    content: '\f046';
+}
+
+#size, #stackedSize {
     padding-left: 0;
     border: none;
     color: white;
 }
 
-#size:focus {
+#size:focus, #stackedSize:focus {
     box-shadow: none;
 }
 
@@ -193,7 +219,7 @@ input:focus {
     min-width: 150px;
 }
 
-.color_button_container,
+  .color_button_container,
 .color_button {
     width: 30px;
     height: 30px;
@@ -248,3 +274,25 @@ input:focus {
     color: #f85032;
 }
 
+.stack_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  height: 30px;
+}
+
+.stack_input {
+  display: flex;
+  align-items: center;
+}
+
+.stack_input label {
+  color: #f85032;
+  padding-right: 15px;
+  font-size: 14px;
+}
+
+#stackedSize {
+  margin-bottom: 0;
+}

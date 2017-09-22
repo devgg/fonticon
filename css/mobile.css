@@ -25,6 +25,14 @@
         align-items: center;
     }
 
+    .stack_container {
+        width: 80vw;
+    }
+
+    .stack_input {
+        width: 100px;
+    }
+
     .color_input {
         width: 100%;
     }

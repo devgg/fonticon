@@ -13,8 +13,11 @@ $(window).on('load', function () {
     var $search = $("#search");
     var $right = $('#right');
     var $size = $("#size");
+	  var $stackedSize = $("#stackedSize")
 
     var symbol = "\uf004";
+	  var stackedSelected = false;
+	  var stackedSymbol;
     var canvas = document.getElementById('canvas');
     var sideLength = 1024;
     canvas.width = sideLength;
@@ -27,21 +30,25 @@ $(window).on('load', function () {
 
     function initialize() {
         $size.on("input", draw);
+		    $stackedSize.on("input", draw);
+		    $stackedSize.hide();
         $color_text.on("input", updateColor.bind(updateColor, $color, $color_text, false));
         $background_color_text.on("input", updateColor.bind(updateColor, $background_color, $background_color_text, false));
         $color.spectrum({
-            color: "#ffffff",
+            color: "#f85032",
             showButtons: false,
             showAlpha: true,
             move: updateColor.bind(updateColor, $color, $color_text, true)
         });
 
         $background_color.spectrum({
-            color: "#f85032",
+            color: "rgba(255,255,255,0)",
             showButtons: false,
             showAlpha: true,
             move: updateColor.bind(updateColor, $background_color, $background_color_text, true)
         });
+        updateColor($color, $color_text, false);
+        updateColor($background_color, $background_color_text, false);
 
         initSearch($search, $right);
 
@@ -49,6 +56,12 @@ $(window).on('load', function () {
             canvas.toBlob(function (blob) {
                 saveAs(blob, "favicon.png");
             });
+        });
+
+		    $("#stacked").click(function() {
+            stackedSelected = this.checked;
+            this.checked ? $stackedSize.show() : $stackedSize.hide();
+            draw();
         });
 
         $.each(icons, function (index, icon) {
@@ -65,7 +78,12 @@ $(window).on('load', function () {
 
 
         $(".icon").on("click", function () {
-            symbol = window.getComputedStyle($(this).children().get()[0], ':before').content.substring(1, 2);
+            var selectedSymbol = window.getComputedStyle($(this).children().get()[0], ':before').content.substring(1, 2);
+            if (stackedSelected) {
+                stackedSymbol = selectedSymbol;
+            } else {
+                symbol = selectedSymbol;
+            }
             draw();
         });
 
@@ -132,18 +150,25 @@ $(window).on('load', function () {
             ctx.fillStyle = $background_color_text.val();
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            setFontSize();
+            setFontSize(symbol, $size);
             ctx.fillStyle = "rgba(0, 0, 0, 1)";
             ctx.globalCompositeOperation = "destination-out";
             ctx.fillText(symbol, sideLength / 2, sideLength / 2);
             ctx.fillStyle = $color_text.val();
             ctx.globalCompositeOperation = "source-over";
             ctx.fillText(symbol, sideLength / 2, sideLength / 2);
+            if (stackedSelected && stackedSymbol) {
+                ctx.save();
+                setFontSize(stackedSymbol, $stackedSize);
+                ctx.globalCompositeOperation = "xor";
+                ctx.fillText(stackedSymbol, sideLength / 2, sideLength / 2);
+                ctx.restore();
+            }
             canvasToFavicon(canvas);
         }
     }
 
-    function setFontSize() {
+    function setFontSize(symbol, $size) {
         var i = sideLength;
         do {
             ctx.font = i + "px FontAwesome";

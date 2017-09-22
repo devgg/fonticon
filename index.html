@@ -32,17 +32,23 @@
                 <div class="color_button_container">
                     <div id="color" class="color_button"></div>
                 </div>
-                <input id="color_text" class="color_text" type="text" value="#ffffff">
+                <input id="color_text" class="color_text" type="text" value="#f85032">
             </div>
-
             <div class="color_input">
                 <div class="color_button_container">
                     <div id="background_color" class="color_button"></div>
                 </div>
-                <input id="background_color_text" class="color_text" type="text" value="#f85032">
+                <input id="background_color_text" class="color_text" type="text" value="rgba(255,255,255,0)">
             </div>
         </div>
         <input id="size" type="range" min="10" max="100" step="1" value="55" data-orientation="horizontal">
+        <div class="stack_container">
+            <div class="stack_input">
+              <input id="stacked" type="checkbox" name="stacked">
+  			      <label for="stacked">Stacked</label>
+            </div>
+			      <input id="stackedSize" type="range" min="10" max="100" step="1" value="55" data-orientation="horizontal">
+		    </div>
         <input id="search" type="text" name="search" autocomplete="off" placeholder="Search...">
         <div id="download">download</div>
     </div>
