@@ -30,8 +30,7 @@ $(window).on('load', function () {
 
     function initialize() {
         $size.on("input", draw);
-		    $stackedSize.on("input", draw);
-		    $stackedSize.hide();
+		$stackedSize.on("input", draw);
         $color_text.on("input", updateColor.bind(updateColor, $color, $color_text, false));
         $background_color_text.on("input", updateColor.bind(updateColor, $background_color, $background_color_text, false));
         $color.spectrum({

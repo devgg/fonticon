@@ -294,5 +294,6 @@ input[type=checkbox]:checked:before{
 }
 
 #stackedSize {
+  display: hidden;
   margin-bottom: 0;
 }
