@@ -4,6 +4,7 @@ Tool for creating favicons and images from [Font Awesome](http://fontawesome.io/
 
 # Features
 
+* Latest Font Awesome 4.7
 * Preview of favicon live in browser
 * Sizing of the icon
 * Transparent icon and background
