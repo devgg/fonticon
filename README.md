@@ -13,7 +13,3 @@ Tool for creating favicons and images from [Font Awesome](http://fontawesome.io/
 * Support stacked icons
 
 ![screenshot-all](https://user-images.githubusercontent.com/24930/30757941-6e8fccf4-9f9e-11e7-8a3c-fbe0f8c5d60a.png)
-
-### Copyright
-
-Copyright 2016 Florian Gauger
