@@ -34,7 +34,7 @@ $(window).on('load', function () {
         $color_text.on("input", updateColor.bind(updateColor, $color, $color_text, false));
         $background_color_text.on("input", updateColor.bind(updateColor, $background_color, $background_color_text, false));
         $color.spectrum({
-            color: "#f85032",
+            color: "#ff3860",
             showButtons: false,
             showAlpha: true,
             move: updateColor.bind(updateColor, $color, $color_text, true)

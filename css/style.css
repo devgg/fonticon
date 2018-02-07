@@ -28,9 +28,7 @@ body {
     height: 100vh;
     overflow: auto;
     color: white;
-    background: #f85032; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #f85032 , #e73827); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #f85032 , #e73827); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #3273DC;
 }
 
 #controls_container {
@@ -104,11 +102,11 @@ body {
 }
 
 #download {
-    background-color: #f85032;
+    background-color: #FF3860;
     font-size: 14px;
     width: 100%;
     height: 30px;
-    border: 1px solid #f85032;
+    border: 1px solid #FF3860;
     border-radius: 5px;
     color: white;
     padding: 0;
@@ -119,12 +117,12 @@ body {
 
 #download:hover {
     background-color: white;
-    color: #f85032;
+    color: #FF3860;
 }
 
 #download:active {
     background-color: white;
-    color: #f85032;
+    color: #FF3860;
 }
 
 input {
@@ -137,14 +135,14 @@ input {
     outline: none;
     padding: 5px 0 5px 10px;
     background: 0 0;
-    color: #f85032;
-    border: 1px solid #f85032;
+    color: #FF3860;
+    border: 1px solid #FF3860;
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
 input:focus {
-    box-shadow: 0 0 7px #f85032;
+    box-shadow: 0 0 7px #FF3860;
 }
 
 input[type=checkbox] {
@@ -185,22 +183,22 @@ input[type=checkbox]:checked:before{
 
 
 *::-webkit-input-placeholder {
-    color: #f85032;
+    color: #FF3860;
     opacity: 0.5;
 }
 
 *:-moz-placeholder {
-    color: #f85032;
+    color: #FF3860;
     opacity: 0.5;
 }
 
 *::-moz-placeholder {
-    color: #f85032;
+    color: #FF3860;
     opacity: 0.5;
 }
 
 *:-ms-input-placeholder {
-    color: #f85032;
+    color: #FF3860;
     opacity: 0.5;
 }
 
@@ -232,7 +230,7 @@ input[type=checkbox]:checked:before{
 }
 
 .color_button {
-    border: 1px solid #f85032;
+    border: 1px solid #FF3860;
     cursor: pointer;
 }
 
@@ -250,7 +248,7 @@ input[type=checkbox]:checked:before{
 }
 
 #background_color {
-    background-color: #f85032;
+    background-color: #FF3860;
 }
 
 #footer {
@@ -259,7 +257,7 @@ input[type=checkbox]:checked:before{
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
-    color: #f85032;
+    color: #FF3860;
     text-decoration: none;
     font-size: 14px;
 }
@@ -271,7 +269,7 @@ input[type=checkbox]:checked:before{
 }
 
 #footer:visited {
-    color: #f85032;
+    color: #FF3860;
 }
 
 .stack_container {
@@ -285,12 +283,18 @@ input[type=checkbox]:checked:before{
 .stack_input {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .stack_input label {
-  color: #f85032;
+  color: #FF3860;
   padding-right: 15px;
   font-size: 14px;
+  cursor: pointer;
+}
+
+#stacked {
+  cursor: pointer;
 }
 
 #stackedSize {
