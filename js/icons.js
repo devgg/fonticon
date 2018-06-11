@@ -1686,31 +1686,6 @@ var icons = [
     ]
   },
   {
-    "name": "Twitter Square",
-    "id": "twitter-square",
-    "unicode": "f081",
-    "created": 1.0,
-    "filter": [
-      "tweet",
-      "social network"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Facebook Square",
-    "id": "facebook-square",
-    "unicode": "f082",
-    "created": 1.0,
-    "filter": [
-      "social network"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "camera-retro",
     "id": "camera-retro",
     "unicode": "f083",
@@ -1853,15 +1828,6 @@ var icons = [
     ]
   },
   {
-    "name": "LinkedIn Square",
-    "id": "linkedin-square",
-    "unicode": "f08c",
-    "created": 1.0,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "Thumb Tack",
     "id": "thumb-tack",
     "unicode": "f08d",
@@ -1923,19 +1889,6 @@ var icons = [
     ],
     "categories": [
       "Web Application Icons"
-    ]
-  },
-  {
-    "name": "GitHub Square",
-    "id": "github-square",
-    "unicode": "f092",
-    "created": 1.0,
-    "url": "github.com/logos",
-    "filter": [
-      "octocat"
-    ],
-    "categories": [
-      "Brand Icons"
     ]
   },
   {
@@ -2020,47 +1973,6 @@ var icons = [
     ],
     "categories": [
       "Web Application Icons"
-    ]
-  },
-  {
-    "name": "Twitter",
-    "id": "twitter",
-    "unicode": "f099",
-    "created": 2.0,
-    "filter": [
-      "tweet",
-      "social network"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Facebook",
-    "id": "facebook",
-    "unicode": "f09a",
-    "created": 2.0,
-    "aliases": [
-      "facebook-f"
-    ],
-    "filter": [
-      "social network"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "GitHub",
-    "id": "github",
-    "unicode": "f09b",
-    "created": 2.0,
-    "url": "github.com/logos",
-    "filter": [
-      "octocat"
-    ],
-    "categories": [
-      "Brand Icons"
     ]
   },
   {
@@ -2629,48 +2541,6 @@ var icons = [
     ]
   },
   {
-    "name": "Pinterest",
-    "id": "pinterest",
-    "unicode": "f0d2",
-    "created": 2.0,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Pinterest Square",
-    "id": "pinterest-square",
-    "unicode": "f0d3",
-    "created": 2.0,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Google Plus Square",
-    "id": "google-plus-square",
-    "unicode": "f0d4",
-    "created": 2.0,
-    "filter": [
-      "social network"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Google Plus",
-    "id": "google-plus",
-    "unicode": "f0d5",
-    "created": 2.0,
-    "filter": [
-      "social network"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "Money",
     "id": "money",
     "unicode": "f0d6",
@@ -2824,15 +2694,6 @@ var icons = [
     ],
     "categories": [
       "Web Application Icons"
-    ]
-  },
-  {
-    "name": "LinkedIn",
-    "id": "linkedin",
-    "unicode": "f0e1",
-    "created": 2.0,
-    "categories": [
-      "Brand Icons"
     ]
   },
   {
@@ -3501,19 +3362,6 @@ var icons = [
     ]
   },
   {
-    "name": "GitHub Alt",
-    "id": "github-alt",
-    "unicode": "f113",
-    "created": 3.0,
-    "url": "github.com/logos",
-    "filter": [
-      "octocat"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "Folder Outlined",
     "id": "folder-o",
     "unicode": "f114",
@@ -3927,15 +3775,6 @@ var icons = [
     ]
   },
   {
-    "name": "MaxCDN",
-    "id": "maxcdn",
-    "unicode": "f136",
-    "created": 3.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "Chevron Circle Left",
     "id": "chevron-circle-left",
     "unicode": "f137",
@@ -3988,31 +3827,6 @@ var icons = [
     ],
     "categories": [
       "Directional Icons"
-    ]
-  },
-  {
-    "name": "HTML 5 Logo",
-    "id": "html5",
-    "unicode": "f13b",
-    "created": 3.1,
-    "code": [
-      "code",
-      "html5"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "CSS 3 Logo",
-    "id": "css3",
-    "unicode": "f13c",
-    "created": 3.1,
-    "filter": [
-      "code"
-    ],
-    "categories": [
-      "Brand Icons"
     ]
   },
   {
@@ -4387,19 +4201,6 @@ var icons = [
     ]
   },
   {
-    "name": "Bitcoin (BTC)",
-    "id": "btc",
-    "unicode": "f15a",
-    "created": 3.2,
-    "aliases": [
-      "bitcoin"
-    ],
-    "categories": [
-      "Currency Icons",
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "File",
     "id": "file",
     "unicode": "f15b",
@@ -4525,151 +4326,6 @@ var icons = [
     ]
   },
   {
-    "name": "YouTube Square",
-    "id": "youtube-square",
-    "unicode": "f166",
-    "created": 3.2,
-    "filter": [
-      "video",
-      "film"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "YouTube",
-    "id": "youtube",
-    "unicode": "f167",
-    "created": 3.2,
-    "filter": [
-      "video",
-      "film"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Xing",
-    "id": "xing",
-    "unicode": "f168",
-    "created": 3.2,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Xing Square",
-    "id": "xing-square",
-    "unicode": "f169",
-    "created": 3.2,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "YouTube Play",
-    "id": "youtube-play",
-    "unicode": "f16a",
-    "created": 3.2,
-    "filter": [
-      "start",
-      "playing"
-    ],
-    "categories": [
-      "Brand Icons",
-      "Video Player Icons"
-    ]
-  },
-  {
-    "name": "Dropbox",
-    "id": "dropbox",
-    "unicode": "f16b",
-    "created": 3.2,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Stack Overflow",
-    "id": "stack-overflow",
-    "unicode": "f16c",
-    "created": 3.2,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Instagram",
-    "id": "instagram",
-    "unicode": "f16d",
-    "created": 4.6,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Flickr",
-    "id": "flickr",
-    "unicode": "f16e",
-    "created": 3.2,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "App.net",
-    "id": "adn",
-    "unicode": "f170",
-    "created": 3.2,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Bitbucket",
-    "id": "bitbucket",
-    "unicode": "f171",
-    "created": 3.2,
-    "filter": [
-      "git"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Bitbucket Square",
-    "id": "bitbucket-square",
-    "unicode": "f172",
-    "created": 3.2,
-    "filter": [
-      "git"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Tumblr",
-    "id": "tumblr",
-    "unicode": "f173",
-    "created": 3.2,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Tumblr Square",
-    "id": "tumblr-square",
-    "unicode": "f174",
-    "created": 3.2,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "Long Arrow Down",
     "id": "long-arrow-down",
     "unicode": "f175",
@@ -4710,91 +4366,6 @@ var icons = [
     ]
   },
   {
-    "name": "Apple",
-    "id": "apple",
-    "unicode": "f179",
-    "created": 3.2,
-    "filter": [
-      "osx",
-      "food"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Windows",
-    "id": "windows",
-    "unicode": "f17a",
-    "created": 3.2,
-    "filter": [
-      "microsoft"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Android",
-    "id": "android",
-    "unicode": "f17b",
-    "created": 3.2,
-    "filter": [
-      "robot"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Linux",
-    "id": "linux",
-    "unicode": "f17c",
-    "created": 3.2,
-    "filter": [
-      "tux"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Dribbble",
-    "id": "dribbble",
-    "unicode": "f17d",
-    "created": 3.2,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Skype",
-    "id": "skype",
-    "unicode": "f17e",
-    "created": 3.2,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Foursquare",
-    "id": "foursquare",
-    "unicode": "f180",
-    "created": 3.2,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Trello",
-    "id": "trello",
-    "unicode": "f181",
-    "created": 3.2,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "Female",
     "id": "female",
     "unicode": "f182",
@@ -4822,24 +4393,6 @@ var icons = [
     ],
     "categories": [
       "Web Application Icons"
-    ]
-  },
-  {
-    "name": "Gratipay (Gittip)",
-    "id": "gratipay",
-    "unicode": "f184",
-    "created": 3.2,
-    "aliases": [
-      "gittip"
-    ],
-    "filter": [
-      "heart",
-      "like",
-      "favorite",
-      "love"
-    ],
-    "categories": [
-      "Brand Icons"
     ]
   },
   {
@@ -4896,59 +4449,6 @@ var icons = [
     ],
     "categories": [
       "Web Application Icons"
-    ]
-  },
-  {
-    "name": "VK",
-    "id": "vk",
-    "unicode": "f189",
-    "created": 3.2,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Weibo",
-    "id": "weibo",
-    "unicode": "f18a",
-    "created": 3.2,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Renren",
-    "id": "renren",
-    "unicode": "f18b",
-    "created": 3.2,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Pagelines",
-    "id": "pagelines",
-    "unicode": "f18c",
-    "created": 4.0,
-    "filter": [
-      "leaf",
-      "leaves",
-      "tree",
-      "plant",
-      "eco",
-      "nature"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Stack Exchange",
-    "id": "stack-exchange",
-    "unicode": "f18d",
-    "created": 4.0,
-    "categories": [
-      "Brand Icons"
     ]
   },
   {
@@ -5026,15 +4526,6 @@ var icons = [
     ]
   },
   {
-    "name": "Vimeo Square",
-    "id": "vimeo-square",
-    "unicode": "f194",
-    "created": 4.0,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "Turkish Lira (TRY)",
     "id": "try",
     "unicode": "f195",
@@ -5074,20 +4565,6 @@ var icons = [
     ]
   },
   {
-    "name": "Slack Logo",
-    "id": "slack",
-    "unicode": "f198",
-    "created": 4.1,
-    "filter": [
-      "hashtag",
-      "anchor",
-      "hash"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "Envelope Square",
     "id": "envelope-square",
     "unicode": "f199",
@@ -5103,24 +4580,6 @@ var icons = [
     ],
     "categories": [
       "Web Application Icons"
-    ]
-  },
-  {
-    "name": "WordPress Logo",
-    "id": "wordpress",
-    "unicode": "f19a",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "OpenID",
-    "id": "openid",
-    "unicode": "f19b",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
     ]
   },
   {
@@ -5151,114 +4610,6 @@ var icons = [
     ],
     "categories": [
       "Web Application Icons"
-    ]
-  },
-  {
-    "name": "Yahoo Logo",
-    "id": "yahoo",
-    "unicode": "f19e",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Google Logo",
-    "id": "google",
-    "unicode": "f1a0",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "reddit Logo",
-    "id": "reddit",
-    "unicode": "f1a1",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "reddit Square",
-    "id": "reddit-square",
-    "unicode": "f1a2",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "StumbleUpon Circle",
-    "id": "stumbleupon-circle",
-    "unicode": "f1a3",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "StumbleUpon Logo",
-    "id": "stumbleupon",
-    "unicode": "f1a4",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Delicious Logo",
-    "id": "delicious",
-    "unicode": "f1a5",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Digg Logo",
-    "id": "digg",
-    "unicode": "f1a6",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Pied Piper PP Logo (Old)",
-    "id": "pied-piper-pp",
-    "unicode": "f1a7",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Pied Piper Alternate Logo",
-    "id": "pied-piper-alt",
-    "unicode": "f1a8",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Drupal Logo",
-    "id": "drupal",
-    "unicode": "f1a9",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Joomla Logo",
-    "id": "joomla",
-    "unicode": "f1aa",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
     ]
   },
   {
@@ -5344,42 +4695,6 @@ var icons = [
     ]
   },
   {
-    "name": "Behance",
-    "id": "behance",
-    "unicode": "f1b4",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Behance Square",
-    "id": "behance-square",
-    "unicode": "f1b5",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Steam",
-    "id": "steam",
-    "unicode": "f1b6",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Steam Square",
-    "id": "steam-square",
-    "unicode": "f1b7",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "Recycle",
     "id": "recycle",
     "unicode": "f1b8",
@@ -5427,33 +4742,6 @@ var icons = [
     "created": 4.1,
     "categories": [
       "Web Application Icons"
-    ]
-  },
-  {
-    "name": "Spotify",
-    "id": "spotify",
-    "unicode": "f1bc",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "deviantART",
-    "id": "deviantart",
-    "unicode": "f1bd",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "SoundCloud",
-    "id": "soundcloud",
-    "unicode": "f1be",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
     ]
   },
   {
@@ -5569,33 +4857,6 @@ var icons = [
     ]
   },
   {
-    "name": "Vine",
-    "id": "vine",
-    "unicode": "f1ca",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Codepen",
-    "id": "codepen",
-    "unicode": "f1cb",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "jsFiddle",
-    "id": "jsfiddle",
-    "unicode": "f1cc",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "Life Ring",
     "id": "life-ring",
     "unicode": "f1cd",
@@ -5618,92 +4879,6 @@ var icons = [
     "categories": [
       "Web Application Icons",
       "Spinner Icons"
-    ]
-  },
-  {
-    "name": "Rebel Alliance",
-    "id": "rebel",
-    "unicode": "f1d0",
-    "created": 4.1,
-    "aliases": [
-      "ra",
-      "resistance"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Galactic Empire",
-    "id": "empire",
-    "unicode": "f1d1",
-    "created": 4.1,
-    "aliases": [
-      "ge"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Git Square",
-    "id": "git-square",
-    "unicode": "f1d2",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Git",
-    "id": "git",
-    "unicode": "f1d3",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Hacker News",
-    "id": "hacker-news",
-    "unicode": "f1d4",
-    "created": 4.1,
-    "aliases": [
-      "y-combinator-square",
-      "yc-square"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Tencent Weibo",
-    "id": "tencent-weibo",
-    "unicode": "f1d5",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "QQ",
-    "id": "qq",
-    "unicode": "f1d6",
-    "created": 4.1,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Weixin (WeChat)",
-    "id": "weixin",
-    "unicode": "f1d7",
-    "created": 4.1,
-    "aliases": [
-      "wechat"
-    ],
-    "categories": [
-      "Brand Icons"
     ]
   },
   {
@@ -5782,26 +4957,6 @@ var icons = [
     ]
   },
   {
-    "name": "Share Alt",
-    "id": "share-alt",
-    "unicode": "f1e0",
-    "created": 4.1,
-    "categories": [
-      "Web Application Icons",
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Share Alt Square",
-    "id": "share-alt-square",
-    "unicode": "f1e1",
-    "created": 4.1,
-    "categories": [
-      "Web Application Icons",
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "Bomb",
     "id": "bomb",
     "unicode": "f1e2",
@@ -5855,33 +5010,6 @@ var icons = [
     ]
   },
   {
-    "name": "Slideshare",
-    "id": "slideshare",
-    "unicode": "f1e7",
-    "created": 4.2,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Twitch",
-    "id": "twitch",
-    "unicode": "f1e8",
-    "created": 4.2,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Yelp",
-    "id": "yelp",
-    "unicode": "f1e9",
-    "created": 4.2,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "Newspaper Outlined",
     "id": "newspaper-o",
     "unicode": "f1ea",
@@ -5909,89 +5037,6 @@ var icons = [
     "created": 4.2,
     "categories": [
       "Web Application Icons"
-    ]
-  },
-  {
-    "name": "Paypal",
-    "id": "paypal",
-    "unicode": "f1ed",
-    "created": 4.2,
-    "categories": [
-      "Brand Icons",
-      "Payment Icons"
-    ]
-  },
-  {
-    "name": "Google Wallet",
-    "id": "google-wallet",
-    "unicode": "f1ee",
-    "created": 4.2,
-    "categories": [
-      "Brand Icons",
-      "Payment Icons"
-    ]
-  },
-  {
-    "name": "Visa Credit Card",
-    "id": "cc-visa",
-    "unicode": "f1f0",
-    "created": 4.2,
-    "categories": [
-      "Brand Icons",
-      "Payment Icons"
-    ]
-  },
-  {
-    "name": "MasterCard Credit Card",
-    "id": "cc-mastercard",
-    "unicode": "f1f1",
-    "created": 4.2,
-    "categories": [
-      "Brand Icons",
-      "Payment Icons"
-    ]
-  },
-  {
-    "name": "Discover Credit Card",
-    "id": "cc-discover",
-    "unicode": "f1f2",
-    "created": 4.2,
-    "categories": [
-      "Brand Icons",
-      "Payment Icons"
-    ]
-  },
-  {
-    "name": "American Express Credit Card",
-    "id": "cc-amex",
-    "unicode": "f1f3",
-    "created": 4.2,
-    "filter": [
-      "amex"
-    ],
-    "categories": [
-      "Brand Icons",
-      "Payment Icons"
-    ]
-  },
-  {
-    "name": "Paypal Credit Card",
-    "id": "cc-paypal",
-    "unicode": "f1f4",
-    "created": 4.2,
-    "categories": [
-      "Brand Icons",
-      "Payment Icons"
-    ]
-  },
-  {
-    "name": "Stripe Credit Card",
-    "id": "cc-stripe",
-    "unicode": "f1f5",
-    "created": 4.2,
-    "categories": [
-      "Brand Icons",
-      "Payment Icons"
     ]
   },
   {
@@ -6119,24 +5164,6 @@ var icons = [
     ]
   },
   {
-    "name": "last.fm",
-    "id": "lastfm",
-    "unicode": "f202",
-    "created": 4.2,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "last.fm Square",
-    "id": "lastfm-square",
-    "unicode": "f203",
-    "created": 4.2,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "Toggle Off",
     "id": "toggle-off",
     "unicode": "f204",
@@ -6182,25 +5209,6 @@ var icons = [
     ]
   },
   {
-    "name": "ioxhost",
-    "id": "ioxhost",
-    "unicode": "f208",
-    "created": 4.2,
-    "url": "ioxhost.co.uk",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "AngelList",
-    "id": "angellist",
-    "unicode": "f209",
-    "created": 4.2,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "Closed Captions",
     "id": "cc",
     "unicode": "f20a",
@@ -6221,106 +5229,6 @@ var icons = [
     ],
     "categories": [
       "Currency Icons"
-    ]
-  },
-  {
-    "name": "meanpath",
-    "id": "meanpath",
-    "unicode": "f20c",
-    "created": 4.2,
-    "url": "meanpath.com",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "BuySellAds",
-    "id": "buysellads",
-    "unicode": "f20d",
-    "created": 4.3,
-    "url": "buysellads.com",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Connect Develop",
-    "id": "connectdevelop",
-    "unicode": "f20e",
-    "created": 4.3,
-    "url": "connectdevelop.com",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "DashCube",
-    "id": "dashcube",
-    "unicode": "f210",
-    "created": 4.3,
-    "url": "dashcube.com",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Forumbee",
-    "id": "forumbee",
-    "unicode": "f211",
-    "created": 4.3,
-    "url": "forumbee.com",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Leanpub",
-    "id": "leanpub",
-    "unicode": "f212",
-    "created": 4.3,
-    "url": "leanpub.com",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Sellsy",
-    "id": "sellsy",
-    "unicode": "f213",
-    "created": 4.3,
-    "url": "sellsy.com",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Shirts in Bulk",
-    "id": "shirtsinbulk",
-    "unicode": "f214",
-    "created": 4.3,
-    "url": "shirtsinbulk.com",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "SimplyBuilt",
-    "id": "simplybuilt",
-    "unicode": "f215",
-    "created": 4.3,
-    "url": "simplybuilt.com",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "skyatlas",
-    "id": "skyatlas",
-    "unicode": "f216",
-    "created": 4.3,
-    "url": "skyatlas.com",
-    "categories": [
-      "Brand Icons"
     ]
   },
   {
@@ -6559,33 +5467,6 @@ var icons = [
     ]
   },
   {
-    "name": "Facebook Official",
-    "id": "facebook-official",
-    "unicode": "f230",
-    "created": 4.3,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Pinterest P",
-    "id": "pinterest-p",
-    "unicode": "f231",
-    "created": 4.3,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "What's App",
-    "id": "whatsapp",
-    "unicode": "f232",
-    "created": 4.3,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "Server",
     "id": "server",
     "unicode": "f233",
@@ -6632,16 +5513,6 @@ var icons = [
     ]
   },
   {
-    "name": "Viacoin",
-    "id": "viacoin",
-    "unicode": "f237",
-    "created": 4.3,
-    "url": "viacoin.org",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "Train",
     "id": "train",
     "unicode": "f238",
@@ -6657,56 +5528,6 @@ var icons = [
     "created": 4.3,
     "categories": [
       "Transportation Icons"
-    ]
-  },
-  {
-    "name": "Medium",
-    "id": "medium",
-    "unicode": "f23a",
-    "created": 4.3,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Y Combinator",
-    "id": "y-combinator",
-    "unicode": "f23b",
-    "created": 4.4,
-    "aliases": [
-      "yc"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Optin Monster",
-    "id": "optin-monster",
-    "unicode": "f23c",
-    "created": 4.4,
-    "url": "optinmonster.com",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "OpenCart",
-    "id": "opencart",
-    "unicode": "f23d",
-    "created": 4.4,
-    "url": "opencart.com",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "ExpeditedSSL",
-    "id": "expeditedssl",
-    "unicode": "f23e",
-    "created": 4.4,
-    "categories": [
-      "Brand Icons"
     ]
   },
   {
@@ -6837,26 +5658,6 @@ var icons = [
     "created": 4.4,
     "categories": [
       "Web Application Icons"
-    ]
-  },
-  {
-    "name": "JCB Credit Card",
-    "id": "cc-jcb",
-    "unicode": "f24b",
-    "created": 4.4,
-    "categories": [
-      "Brand Icons",
-      "Payment Icons"
-    ]
-  },
-  {
-    "name": "Diner's Club Credit Card",
-    "id": "cc-diners-club",
-    "unicode": "f24c",
-    "created": 4.4,
-    "categories": [
-      "Brand Icons",
-      "Payment Icons"
     ]
   },
   {
@@ -7041,129 +5842,6 @@ var icons = [
     ]
   },
   {
-    "name": "GG Currency",
-    "id": "gg",
-    "unicode": "f260",
-    "created": 4.4,
-    "categories": [
-      "Currency Icons",
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "GG Currency Circle",
-    "id": "gg-circle",
-    "unicode": "f261",
-    "created": 4.4,
-    "categories": [
-      "Currency Icons",
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "TripAdvisor",
-    "id": "tripadvisor",
-    "unicode": "f262",
-    "created": 4.4,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Odnoklassniki",
-    "id": "odnoklassniki",
-    "unicode": "f263",
-    "created": 4.4,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Odnoklassniki Square",
-    "id": "odnoklassniki-square",
-    "unicode": "f264",
-    "created": 4.4,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Get Pocket",
-    "id": "get-pocket",
-    "unicode": "f265",
-    "created": 4.4,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Wikipedia W",
-    "id": "wikipedia-w",
-    "unicode": "f266",
-    "created": 4.4,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Safari",
-    "id": "safari",
-    "unicode": "f267",
-    "created": 4.4,
-    "filter": [
-      "browser"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Chrome",
-    "id": "chrome",
-    "unicode": "f268",
-    "created": 4.4,
-    "filter": [
-      "browser"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Firefox",
-    "id": "firefox",
-    "unicode": "f269",
-    "created": 4.4,
-    "filter": [
-      "browser"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Opera",
-    "id": "opera",
-    "unicode": "f26a",
-    "created": 4.4,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Internet-explorer",
-    "id": "internet-explorer",
-    "unicode": "f26b",
-    "created": 4.4,
-    "filter": [
-      "browser",
-      "ie"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "Television",
     "id": "television",
     "unicode": "f26c",
@@ -7178,33 +5856,6 @@ var icons = [
     ],
     "categories": [
       "Web Application Icons"
-    ]
-  },
-  {
-    "name": "Contao",
-    "id": "contao",
-    "unicode": "f26d",
-    "created": 4.4,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "500px",
-    "id": "500px",
-    "unicode": "f26e",
-    "created": 4.4,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Amazon",
-    "id": "amazon",
-    "unicode": "f270",
-    "created": 4.4,
-    "categories": [
-      "Brand Icons"
     ]
   },
   {
@@ -7337,66 +5988,6 @@ var icons = [
     ]
   },
   {
-    "name": "Houzz",
-    "id": "houzz",
-    "unicode": "f27c",
-    "created": 4.4,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Vimeo",
-    "id": "vimeo",
-    "unicode": "f27d",
-    "created": 4.4,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Font Awesome Black Tie",
-    "id": "black-tie",
-    "unicode": "f27e",
-    "created": 4.4,
-    "url": "blacktie.io",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Fonticons",
-    "id": "fonticons",
-    "unicode": "f280",
-    "created": 4.4,
-    "url": "fonticons.com",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "reddit Alien",
-    "id": "reddit-alien",
-    "unicode": "f281",
-    "created": 4.5,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Edge Browser",
-    "id": "edge",
-    "unicode": "f282",
-    "created": 4.5,
-    "filter": [
-      "browser",
-      "ie"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "Credit Card",
     "id": "credit-card-alt",
     "unicode": "f283",
@@ -7413,71 +6004,6 @@ var icons = [
     "categories": [
       "Payment Icons",
       "Web Application Icons"
-    ]
-  },
-  {
-    "name": "Codie Pie",
-    "id": "codiepie",
-    "unicode": "f284",
-    "created": 4.5,
-    "url": "codiepie.com",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "MODX",
-    "id": "modx",
-    "unicode": "f285",
-    "created": 4.5,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Fort Awesome",
-    "id": "fort-awesome",
-    "unicode": "f286",
-    "created": 4.5,
-    "url": "fortawesome.com",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "USB",
-    "id": "usb",
-    "unicode": "f287",
-    "created": 4.5,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Product Hunt",
-    "id": "product-hunt",
-    "unicode": "f288",
-    "created": 4.5,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Mixcloud",
-    "id": "mixcloud",
-    "unicode": "f289",
-    "created": 4.5,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Scribd",
-    "id": "scribd",
-    "unicode": "f28a",
-    "created": 4.5,
-    "categories": [
-      "Brand Icons"
     ]
   },
   {
@@ -7544,75 +6070,12 @@ var icons = [
     ]
   },
   {
-    "name": "Bluetooth",
-    "id": "bluetooth",
-    "unicode": "f293",
-    "created": 4.5,
-    "categories": [
-      "Web Application Icons",
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Bluetooth",
-    "id": "bluetooth-b",
-    "unicode": "f294",
-    "created": 4.5,
-    "categories": [
-      "Web Application Icons",
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "Percent",
     "id": "percent",
     "unicode": "f295",
     "created": 4.5,
     "categories": [
       "Web Application Icons"
-    ]
-  },
-  {
-    "name": "GitLab",
-    "id": "gitlab",
-    "unicode": "f296",
-    "created": 4.6,
-    "url": "gitlab.com",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "WPBeginner",
-    "id": "wpbeginner",
-    "unicode": "f297",
-    "created": 4.6,
-    "url": "wpbeginner.com",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "WPForms",
-    "id": "wpforms",
-    "unicode": "f298",
-    "created": 4.6,
-    "url": "wpforms.com",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Envira Gallery",
-    "id": "envira",
-    "unicode": "f299",
-    "created": 4.6,
-    "url": "enviragallery.com",
-    "filter": [
-      "leaf"
-    ],
-    "categories": [
-      "Brand Icons"
     ]
   },
   {
@@ -7732,24 +6195,6 @@ var icons = [
     ]
   },
   {
-    "name": "Glide",
-    "id": "glide",
-    "unicode": "f2a5",
-    "created": 4.6,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Glide G",
-    "id": "glide-g",
-    "unicode": "f2a6",
-    "created": 4.6,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "Sign Language",
     "id": "sign-language",
     "unicode": "f2a7",
@@ -7770,113 +6215,6 @@ var icons = [
     "categories": [
       "Web Application Icons",
       "Accessibility Icons"
-    ]
-  },
-  {
-    "name": "Viadeo",
-    "id": "viadeo",
-    "unicode": "f2a9",
-    "created": 4.6,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Viadeo Square",
-    "id": "viadeo-square",
-    "unicode": "f2aa",
-    "created": 4.6,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Snapchat",
-    "id": "snapchat",
-    "unicode": "f2ab",
-    "created": 4.6,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Snapchat Ghost",
-    "id": "snapchat-ghost",
-    "unicode": "f2ac",
-    "created": 4.6,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Snapchat Square",
-    "id": "snapchat-square",
-    "unicode": "f2ad",
-    "created": 4.6,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Pied Piper Logo",
-    "id": "pied-piper",
-    "unicode": "f2ae",
-    "created": 4.6,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "First Order",
-    "id": "first-order",
-    "unicode": "f2b0",
-    "created": 4.6,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Yoast",
-    "id": "yoast",
-    "unicode": "f2b1",
-    "created": 4.6,
-    "url": "yoast.com",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "ThemeIsle",
-    "id": "themeisle",
-    "unicode": "f2b2",
-    "created": 4.6,
-    "url": "themeisle.com",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Google Plus Official",
-    "id": "google-plus-official",
-    "unicode": "f2b3",
-    "created": 4.6,
-    "aliases": [
-      "google-plus-circle"
-    ],
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Font Awesome",
-    "id": "font-awesome",
-    "unicode": "f2b4",
-    "created": 4.6,
-    "aliases": [
-      "fa"
-    ],
-    "categories": [
-      "Brand Icons"
     ]
   },
   {
@@ -7922,16 +6260,6 @@ var icons = [
     ],
     "categories": [
       "Web Application Icons"
-    ]
-  },
-  {
-    "name": "Linode",
-    "id": "linode",
-    "unicode": "f2b8",
-    "created": 4.7,
-    "url": "linode.com",
-    "categories": [
-      "Brand Icons"
     ]
   },
   {
@@ -8034,33 +6362,6 @@ var icons = [
     ],
     "categories": [
       "Web Application Icons"
-    ]
-  },
-  {
-    "name": "Quora",
-    "id": "quora",
-    "unicode": "f2c4",
-    "created": 4.7,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Free Code Camp",
-    "id": "free-code-camp",
-    "unicode": "f2c5",
-    "created": 4.7,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Telegram",
-    "id": "telegram",
-    "unicode": "f2c6",
-    "created": 4.7,
-    "categories": [
-      "Brand Icons"
     ]
   },
   {
@@ -8207,61 +6508,6 @@ var icons = [
     ]
   },
   {
-    "name": "Bandcamp",
-    "id": "bandcamp",
-    "unicode": "f2d5",
-    "created": 4.7,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Grav",
-    "id": "grav",
-    "unicode": "f2d6",
-    "created": 4.7,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Etsy",
-    "id": "etsy",
-    "unicode": "f2d7",
-    "created": 4.7,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "IMDB",
-    "id": "imdb",
-    "unicode": "f2d8",
-    "created": 4.7,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Ravelry",
-    "id": "ravelry",
-    "unicode": "f2d9",
-    "created": 4.7,
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Eercast",
-    "id": "eercast",
-    "unicode": "f2da",
-    "created": 4.7,
-    "url": "eercast.com",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
     "name": "Microchip",
     "id": "microchip",
     "unicode": "f2db",
@@ -8279,34 +6525,5 @@ var icons = [
       "Web Application Icons"
     ]
   },
-  {
-    "name": "Superpowers",
-    "id": "superpowers",
-    "unicode": "f2dd",
-    "created": 4.7,
-    "url": "superpowers.io",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "WPExplorer",
-    "id": "wpexplorer",
-    "unicode": "f2de",
-    "created": 4.7,
-    "url": "wpexplorer.com",
-    "categories": [
-      "Brand Icons"
-    ]
-  },
-  {
-    "name": "Meetup",
-    "id": "meetup",
-    "unicode": "f2e0",
-    "created": 4.7,
-    "categories": [
-      "Brand Icons"
-    ]
-  }
 ];
 
