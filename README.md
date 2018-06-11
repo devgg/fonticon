@@ -12,4 +12,4 @@ Tool for creating favicons and images from [Font Awesome](http://fontawesome.io/
 * Fuzzy search and keyword search
 * Support stacked icons
 
-![screenshot-all](https://user-images.githubusercontent.com/24930/30757941-6e8fccf4-9f9e-11e7-8a3c-fbe0f8c5d60a.png)
+![screenshot-all](https://user-images.githubusercontent.com/8250067/41254913-3090a478-6dc5-11e8-8e68-1b77a0e44812.png)
