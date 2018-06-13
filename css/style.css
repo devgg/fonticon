@@ -79,17 +79,11 @@ body {
     font-size: 30px;
 }
 
-.icon:hover {
-    opacity: 0.7;
-}
-
 .icon:active {
     opacity: 0.5;
 }
 
 .icon:hover, .icon:focus, .icon:active {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
 }
 
 .icon_text {
@@ -301,4 +295,108 @@ input[type=checkbox]:checked:before{
 #stacked_size {
   display: none;
   margin-bottom: 0;
+}
+
+.underline {
+    position: relative;
+}
+
+.underline:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    height: 1px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    background-color: white;
+}
+
+.underline:hover:before, .underline:focus:before, .underline:active:before,
+.icon:hover > .underline:before, .icon:focus > .underline:before, .icon:active > .underline:before {
+    left: 0;
+    right: 0;
+}
+
+.hover {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon:hover > i, .icon:focus > i, .icon:active > i {
+    -webkit-animation-duration: .3s, 1.5s;
+    animation-duration: .3s, 1.5s;
+    -webkit-animation-delay: 0s, .3s;
+    animation-delay: 0s, .3s;
+    -webkit-animation-timing-function: ease-out, ease-in-out;
+    animation-timing-function: ease-out, ease-in-out;
+    -webkit-animation-iteration-count: 1, infinite;
+    animation-iteration-count: 1, infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-direction: normal, alternate;
+    animation-direction: normal, alternate;
+    -webkit-animation-name: hvr-bob-float-top, hvr-bob-top;
+    animation-name: hvr-bob-float-top, hvr-bob-top;
+}
+
+@-webkit-keyframes hvr-bob-top {
+    0% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+
+    50% {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+    }
+
+    100% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes hvr-bob-top {
+    0% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+
+    50% {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+    }
+
+    100% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+}
+
+@-webkit-keyframes hvr-bob-float-top {
+    100% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes hvr-bob-float-top {
+    100% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
 }

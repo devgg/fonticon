@@ -69,11 +69,11 @@ $(window).on('load', function () {
             }
             var styleClass = "fa" + iconStyle + " fa-" + icon.id; 
             var $icon = $("<div>")
-                    .addClass("icon")
+                    .addClass("icon hover")
                     .data('style', iconStyle)
                     .append($('<i>')
                     .addClass(styleClass));
-            $icon.append($("<div>").addClass("icon_text").text(icon.id));
+            $icon.append($("<div>").addClass("icon_text underline").text(icon.id));
             $iconOuter.append($icon);
             $right.append($iconOuter);
         });
