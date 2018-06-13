@@ -76,6 +76,7 @@ body {
     transition-duration: 0.3s;
     -webkit-transition-property: transform;
     transition-property: transform;
+    font-size: 30px;
 }
 
 .icon:hover {
@@ -147,9 +148,9 @@ input:focus {
 
 input[type=checkbox] {
   display: inline-block;
-  font-family: FontAwesome;
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 400;
   font-style: normal;
-  font-weight: normal;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -163,21 +164,21 @@ input[type=checkbox] {
 }
 
 input[type=checkbox]:before {
-    content: '\f096';
+    content: '\f0c8';
     visibility: visible;
 }
 
 input[type=checkbox]:checked:before{
-    content: '\f046';
+    content: '\f14a';
 }
 
-#size, #stackedSize {
+#size, #stacked_size {
     padding-left: 0;
     border: none;
     color: white;
 }
 
-#size:focus, #stackedSize:focus {
+#size:focus, #stacked_size:focus {
     box-shadow: none;
 }
 
@@ -263,8 +264,8 @@ input[type=checkbox]:checked:before{
 }
 
 #footer > i {
-    font-size: 20px;
-    margin-right: 3px;
+    font-size: 17px;
+    margin-right: 5px;
     cursor: pointer;
 }
 
@@ -297,7 +298,7 @@ input[type=checkbox]:checked:before{
   cursor: pointer;
 }
 
-#stackedSize {
+#stacked_size {
   display: none;
   margin-bottom: 0;
 }

@@ -1,10 +1,3 @@
-function FASymbol(name, id, unicode, $icon) {
-    this.name = name;
-    this.id = id;
-    this.unicode = unicode;
-    this.$icon = $icon;
-}
-
 $(window).on('load', function () {
     var $color = $("#color");
     var $color_text = $("#color_text");
@@ -13,11 +6,14 @@ $(window).on('load', function () {
     var $search = $("#search");
     var $right = $('#right');
     var $size = $("#size");
-	var $stackedSize = $("#stackedSize")
+	var $stackedLabel = $("#stacked_label")
+	var $stackedSize = $("#stacked_size")
 
     var symbol = "\uf004";
+    var symbolStyle = "s";
 	var stackedSelected = false;
 	var stackedSymbol = "\uf004";
+    var stackedSymbolStyle = "s";
     var canvas = document.getElementById('canvas');
     var sideLength = 1024;
     canvas.width = sideLength;
@@ -25,29 +21,28 @@ $(window).on('load', function () {
     var ctx = canvas.getContext('2d');
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    var symbols = [];
     initialize();
 
     function initialize() {
         $size.on("input", draw);
 		$stackedSize.on("input", draw);
-        $color_text.on("input", updateColor.bind(updateColor, $color, $color_text, false));
-        $background_color_text.on("input", updateColor.bind(updateColor, $background_color, $background_color_text, false));
+        $color_text.on("input", updateColor.bind(updateColor, $color, $color_text, false, true));
+        $background_color_text.on("input", updateColor.bind(updateColor, $background_color, $background_color_text, false, true));
         $color.spectrum({
             color: "#ff3860",
             showButtons: false,
             showAlpha: true,
-            move: updateColor.bind(updateColor, $color, $color_text, true)
+            move: updateColor.bind(updateColor, $color, $color_text, true, true)
         });
 
         $background_color.spectrum({
             color: "rgba(255,255,255,0)",
             showButtons: false,
             showAlpha: true,
-            move: updateColor.bind(updateColor, $background_color, $background_color_text, true)
+            move: updateColor.bind(updateColor, $background_color, $background_color_text, true, true)
         });
-        updateColor($color, $color_text, false);
-        updateColor($background_color, $background_color_text, false);
+        updateColor($color, $color_text, false, false);
+        updateColor($background_color, $background_color_text, false, false);
 
         initSearch($search, $right);
 
@@ -57,7 +52,7 @@ $(window).on('load', function () {
             });
         });
 
-		    $("#stacked").click(function() {
+        $("#stacked").click(function() {
             stackedSelected = this.checked;
             this.checked ? $stackedSize.show() : $stackedSize.hide();
             draw();
@@ -65,28 +60,39 @@ $(window).on('load', function () {
 
         $.each(icons, function (index, icon) {
             var $iconOuter = $("<div>").addClass("icon_outer").data("id", icon.id);
+
+            var iconStyle;
+            switch (icon.style) {
+              case 'solid': iconStyle = 's'; break;
+              case 'regular': iconStyle = 'r'; break;
+              default: console.error('Unkown icon style.');
+            }
+            var styleClass = "fa" + iconStyle + " fa-" + icon.id; 
             var $icon = $("<div>")
                     .addClass("icon")
-                    .append($('<i class="fa fa-' + icon.id + '"></i>'));
+                    .data('style', iconStyle)
+                    .append($('<i>')
+                    .addClass(styleClass));
             $icon.append($("<div>").addClass("icon_text").text(icon.id));
             $iconOuter.append($icon);
             $right.append($iconOuter);
-
-            symbols.push(new FASymbol(icon.name, icon.id, icon.unicode, $icon));
         });
 
 
         $(".icon").on("click touchstart", function () {
             var selectedSymbol = window.getComputedStyle($(this).children().get()[0], ':before').content.substring(1, 2);
+            var selectedSymbolStyle = $(this).data('style');
             if (stackedSelected) {
                 stackedSymbol = selectedSymbol;
+                stackedSymbolStyle = selectedSymbolStyle;
             } else {
                 symbol = selectedSymbol;
+                symbolStyle = selectedSymbolStyle;
             }
             draw();
         });
 
-        draw();
+        setTimeout(draw, 1000);
     }
 
     function initSearch($search, $right) {
@@ -99,8 +105,9 @@ $(window).on('load', function () {
             maxPatternLength: 32,
             minMatchCharLength: 1,
             keys: [
+                "id",
                 "name",
-                "filter"
+                "search"
             ]
         };
         var fuse = new Fuse(icons, options);
@@ -123,7 +130,7 @@ $(window).on('load', function () {
         })
     }
 
-    function updateColor($color, $color_text, fromPicker) {
+    function updateColor($color, $color_text, fromPicker, doDraw) {
         if (!fromPicker) {
             $color.spectrum("set", $color_text.val());
         }
@@ -132,7 +139,9 @@ $(window).on('load', function () {
         if (fromPicker) {
             $color_text.val(rgba);
         }
-        draw();
+        if (doDraw) {
+            draw();
+        }
     }
 
     function colorToRgba(color) {
@@ -149,7 +158,7 @@ $(window).on('load', function () {
             ctx.fillStyle = $background_color_text.val();
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            setFontSize(symbol, $size);
+            setFontSize(symbol, symbolStyle, $size);
             ctx.fillStyle = "rgba(0, 0, 0, 1)";
             ctx.globalCompositeOperation = "destination-out";
             ctx.fillText(symbol, sideLength / 2, sideLength / 2);
@@ -158,7 +167,7 @@ $(window).on('load', function () {
             ctx.fillText(symbol, sideLength / 2, sideLength / 2);
             if (stackedSelected && stackedSymbol) {
                 ctx.save();
-                setFontSize(stackedSymbol, $stackedSize);
+                setFontSize(stackedSymbol, stackedSymbolStyle, $stackedSize);
                 ctx.globalCompositeOperation = "xor";
                 ctx.fillText(stackedSymbol, sideLength / 2, sideLength / 2);
                 ctx.restore();
@@ -167,13 +176,24 @@ $(window).on('load', function () {
         }
     }
 
-    function setFontSize(symbol, $size) {
+    function getFont(symbolStyle, pixelSize) {
+        var font = pixelSize + 'px "Font Awesome 5 Free"';
+        var fontWeight = 0;
+        switch (symbolStyle) {
+          case 's': fontWeight = 900; break;
+          case 'r': fontWeight = 400; break;
+          default: console.error('Unkown icon style.');
+        }
+        return fontWeight + ' ' + font;
+    }
+
+    function setFontSize(symbol, symbolStyle, $size) {
         var i = sideLength;
         do {
-            ctx.font = i + "px FontAwesome";
+            ctx.font = getFont(symbolStyle, i);
             i--;
         } while (ctx.measureText(symbol).width > sideLength);
-        ctx.font = (i * ($size.val() / 100)) + "px FontAwesome";
+        ctx.font = getFont(symbolStyle, i * $size.val() / 100);
     }
 });
 
