@@ -14,9 +14,10 @@ for icon_name, icon in icons_json.items():
                 'name': icon['label'],
                 'search_terms': icon['search']['terms'],
                 'style': style,
+                'unicode': '\\u' + icon['unicode'],
             })
 
-js_icons = 'var icons = ' + json.dumps(result)
+js_icons = 'var icons = ' + json.dumps(result).replace('\\\\', '\\')
 
 with open('js/icons.js', 'w') as f:
     f.write(js_icons)

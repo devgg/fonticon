@@ -71,6 +71,7 @@ $(window).on('load', function () {
             var $icon = $("<div>")
                     .addClass("icon hover")
                     .data('style', iconStyle)
+                    .data('unicode', icon.unicode)
                     .append($('<i>')
                     .addClass(styleClass));
             $icon.append($("<div>").addClass("icon_text underline").text(icon.id));
@@ -80,7 +81,7 @@ $(window).on('load', function () {
 
 
         $(".icon").on("click touchstart", function () {
-            var selectedSymbol = window.getComputedStyle($(this).children().get()[0], ':before').content.substring(1, 2);
+            var selectedSymbol  = $(this).data('unicode');
             var selectedSymbolStyle = $(this).data('style');
             if (stackedSelected) {
                 stackedSymbol = selectedSymbol;
