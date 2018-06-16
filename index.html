@@ -50,7 +50,16 @@
                 <input id="stacked_size" type="range" min="10" max="100" step="1" value="60" data-orientation="horizontal">
 		    </div>
         <input id="search" type="text" name="search" autocomplete="off" placeholder="Search...">
-        <div id="download">download</div>
+        <div id="download_container">
+            <div id="download">
+                <div>download</div>
+                <i class="fas fa-circle-notch fa-spin"></i>
+            </div>
+            <div id="file_format">
+                <div id="file_format_text">.ico</div>
+                <i class="fas fa-angle-down"></i>
+            </div>
+        </div>
     </div>
     <a id="footer" href="https://github.com/devgg/FontIcon">
         <i class="fab fa-github"></i>
@@ -59,5 +68,6 @@
 </div>
 <div id="right">
 </div>
+<iframe id="download_iframe" style="display:none;"></iframe>
 </body>
 </html>

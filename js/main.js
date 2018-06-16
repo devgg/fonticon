@@ -1,4 +1,5 @@
 $(window).on('load', function () {
+
     var $color = $("#color");
     var $color_text = $("#color_text");
     var $background_color = $("#background_color");
@@ -6,9 +7,14 @@ $(window).on('load', function () {
     var $search = $("#search");
     var $right = $('#right');
     var $size = $("#size");
-	var $stackedLabel = $("#stacked_label")
-	var $stackedSize = $("#stacked_size")
+    var $download = $("#download");
+	var $stackedLabel = $("#stacked_label");
+	var $stackedSize = $("#stacked_size");
+	var $downloadIframe = $("#download_iframe");
+	var $fileFormatText = $("#file_format_text");
 
+    var createFaviconUrl = "https://fonticon-207412.appspot.com/";
+    var loading = false;
     var symbol = "\uf004";
     var symbolStyle = "s";
 	var stackedSelected = false;
@@ -46,10 +52,44 @@ $(window).on('load', function () {
 
         initSearch($search, $right);
 
-        $("#download").on("click", function () {
-            canvas.toBlob(function (blob) {
-                saveAs(blob, "favicon.png");
-            });
+        function loadingFinished() {
+            loading = false;
+            $download.removeClass("loading");
+        }
+
+        function iconCreationError(errorMessage) {
+            console.error(errorMessage);
+        }
+
+        $download.on("click", function () {
+            if (!loading) {
+                loading = true;
+                $download.addClass("loading");
+                if ($fileFormatText.text() == ".ico") {
+                    var iconData = canvas.toDataURL().split(',')[1];
+                    $.ajax({
+                        type: "POST",
+                        url: createFaviconUrl,
+                        data: iconData,
+                        success: function(response) {
+                            if (response.status == "error") {
+                                iconCreationError(response.error_message);
+                            } else {
+                                $downloadIframe.attr('src', response.url);
+                            }
+                        },
+                        error: function(jqXHR, textStatus, errorMessage) {
+                            iconCreationError(errorMessage);
+                        },
+                        complete: loadingFinished
+                    })
+                } else {
+                    canvas.toBlob(function (blob) {
+                        saveAs(blob, "favicon.png");
+                        loadingFinished();
+                    });
+                }
+            }
         });
 
         $("#stacked").click(function() {
@@ -92,6 +132,15 @@ $(window).on('load', function () {
             }
             draw();
         });
+
+        $("#file_format").on("click", function () {
+            new_format = ".ico";
+            if ($fileFormatText.text() == ".ico") {
+                new_format = ".png";
+            }
+            $fileFormatText.text(new_format);
+        });
+
 
         setTimeout(draw, 1000);
     }
