@@ -1,4 +1,4 @@
-import urllib.request, json 
+import urllib.request, json
 
 icons_json_url = 'https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/advanced-options/metadata/icons.json'
 
@@ -20,7 +20,8 @@ for icon_name, icon in icons_json.items():
                 result_icon['search_terms'] = search_terms
             result.append(result_icon)
 
-js_icons = 'var icons = ' + json.dumps(result, separators=(',', ':')).replace('\\\\', '\\')
+js_icons = 'var icons = ' + json.dumps(
+    result, separators=(',', ':')).replace('\\\\', '\\')
 
 with open('js/icons.js', 'w') as f:
     f.write(js_icons)
