@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +11,7 @@
     <link rel="stylesheet" href="css/rangeslider.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobile.css">
-    <link rel='stylesheet' href='lib/spectrum.css'/>
+    <link rel='stylesheet' href='lib/spectrum.css' />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/tinysort.js"></script>
@@ -23,51 +24,53 @@
     <script src="js/icons.js"></script>
     <script src="js/main.js"></script>
 </head>
+
 <body>
-<div id="left">
-    <div id="controls_container">
-        <canvas id="canvas"></canvas>
-        <div id="colors">
-            <div class="color_input">
-                <div class="color_button_container">
-                    <div id="color" class="color_button"></div>
+    <div id="left">
+        <div id="controls_container">
+            <canvas id="canvas"></canvas>
+            <div id="colors">
+                <div class="color_input">
+                    <div class="color_button_container">
+                        <div id="color" class="color_button"></div>
+                    </div>
+                    <input id="color_text" class="color_text" type="text" value="#ff3860">
                 </div>
-                <input id="color_text" class="color_text" type="text" value="#ff3860">
-            </div>
-            <div class="color_input">
-                <div class="color_button_container">
-                    <div id="background_color" class="color_button"></div>
+                <div class="color_input">
+                    <div class="color_button_container">
+                        <div id="background_color" class="color_button"></div>
+                    </div>
+                    <input id="background_color_text" class="color_text" type="text" value="rgba(255,255,255,0)">
                 </div>
-                <input id="background_color_text" class="color_text" type="text" value="rgba(255,255,255,0)">
             </div>
-        </div>
-        <input id="size" type="range" min="10" max="100" step="1" value="85" data-orientation="horizontal">
-        <div class="stack_container">
-            <div class="stack_input">
-                  <input id="stacked" type="checkbox" name="stacked">
-  			      <label for="stacked">Stacked</label>
-            </div>
+            <input id="size" type="range" min="10" max="100" step="1" value="85" data-orientation="horizontal">
+            <div class="stack_container">
+                <div class="stack_input">
+                    <input id="stacked" type="checkbox" name="stacked">
+                    <label for="stacked">Stacked</label>
+                </div>
                 <input id="stacked_size" type="range" min="10" max="100" step="1" value="60" data-orientation="horizontal">
-		    </div>
-        <input id="search" type="text" name="search" autocomplete="off" placeholder="Search...">
-        <div id="download_container">
-            <div id="download">
-                <div>download</div>
-                <i class="fas fa-circle-notch fa-spin"></i>
             </div>
-            <div id="file_format">
-                <div id="file_format_text">.ico</div>
-                <i class="fas fa-angle-down"></i>
+            <input id="search" type="text" name="search" autocomplete="off" placeholder="Search...">
+            <div id="download_container">
+                <div id="download">
+                    <div>download</div>
+                    <i class="fas fa-circle-notch fa-spin"></i>
+                </div>
+                <div id="file_format">
+                    <div id="file_format_text">.ico</div>
+                    <i class="fas fa-angle-down"></i>
+                </div>
             </div>
         </div>
-    </div>
-    <a id="footer" href="https://github.com/devgg/FontIcon">
+        <a id="footer" href="https://github.com/devgg/FontIcon">
         <i class="fab fa-github"></i>
         View on GitHub
     </a>
-</div>
-<div id="right">
-</div>
-<iframe id="download_iframe" style="display:none;"></iframe>
+    </div>
+    <div id="right">
+    </div>
+    <iframe id="download_iframe" style="display:none;"></iframe>
 </body>
+
 </html>
