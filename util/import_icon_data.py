@@ -9,15 +9,18 @@ result = []
 for icon_name, icon in icons_json.items():
     for style in icon['styles']:
         if style != 'brands':
-            result.append({
+            result_icon = {
                 'id': icon_name,
                 'name': icon['label'],
-                'search_terms': icon['search']['terms'],
                 'style': style,
                 'unicode': '\\u' + icon['unicode'],
-            })
+            }
+            search_terms = icon['search']['terms']
+            if search_terms:
+                result_icon['search_terms'] = search_terms
+            result.append(result_icon)
 
-js_icons = 'var icons = ' + json.dumps(result).replace('\\\\', '\\')
+js_icons = 'var icons = ' + json.dumps(result, separators=(',', ':')).replace('\\\\', '\\')
 
 with open('js/icons.js', 'w') as f:
     f.write(js_icons)
