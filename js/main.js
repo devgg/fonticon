@@ -156,7 +156,7 @@ $(window).on('load', function() {
       distance : 100,
       maxPatternLength : 32,
       minMatchCharLength : 1,
-      keys : [ "id", "name", "search" ]
+      keys : [ "id", "name", "search_terms" ]
     };
     var fuse = new Fuse(icons, options);
     $search.on("input", function() {
