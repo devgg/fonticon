@@ -7,18 +7,19 @@ with urllib.request.urlopen(icons_json_url) as url:
 
 result = []
 for icon_name, icon in icons_json.items():
-    for style in icon['styles']:
-        if style != 'brands':
-            result_icon = {
-                'id': icon_name,
-                'name': icon['label'],
-                'style': style,
-                'unicode': '\\u' + icon['unicode'],
-            }
-            search_terms = icon['search']['terms']
-            if search_terms:
-                result_icon['search_terms'] = search_terms
-            result.append(result_icon)
+    if icon_name != 'font-awesome-logo-full':
+        for style in icon['styles']:
+            if style != 'brands':
+                result_icon = {
+                    'id': icon_name,
+                    'name': icon['label'],
+                    'style': style,
+                    'unicode': '\\u' + icon['unicode'],
+                }
+                search_terms = icon['search']['terms']
+                if search_terms:
+                    result_icon['search_terms'] = search_terms
+                result.append(result_icon)
 
 js_icons = 'var icons = ' + json.dumps(
     result, separators=(',', ':')).replace('\\\\', '\\')
