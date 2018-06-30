@@ -123,6 +123,11 @@ body {
   width: 80%;
   border-radius: 5px 0 0 5px;
   border-right-color: white;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #download:hover,
@@ -345,6 +350,11 @@ input[type='checkbox']:checked:before {
   padding-right: 15px;
   font-size: 14px;
   cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #stacked {
