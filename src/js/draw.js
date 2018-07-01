@@ -13,7 +13,7 @@ function initDraw(canvas_, ctx_, canvasSize_, state) {
 }
 
 function setFont(icon, size) {
-  var fontWeight = 0;
+  let fontWeight = 0;
   switch (icon.style) {
     case 'fas':
       fontWeight = 900;

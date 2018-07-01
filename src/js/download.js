@@ -22,10 +22,8 @@ function initDownload() {
   }
 
   $download.on('click', function() {
-    postAndRedirect(createAdvancedRequest());
-
-    if (false) {
-      // if (!loading) {
+    //postAndRedirect(createAdvancedRequest());
+    if (!loading) {
       loading = true;
       $download.addClass('loading');
       if ($fileFormatText.text() == '.ico') {
