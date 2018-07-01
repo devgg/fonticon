@@ -11,7 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --display-modules",
     "start:dev": "webpack-dev-server",
-    "build:prod": "webpack --display-modules --mode=production"
+    "build:prod": "webpack --display-modules --mode=production",
+    "precommit": "pretty-quick --staged"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,8 @@
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^0.14.3",
+    "pretty-quick": "^1.6.0",
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.7",
     "webpack": "^4.12.1",
