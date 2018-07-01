@@ -14,7 +14,7 @@ function initDraw(canvas_, ctx_, canvasSize_, state) {
 
 function setFont(icon, size) {
   let fontWeight = 0;
-  switch (icon.style) {
+  switch (icon.st) {
     case 'fas':
       fontWeight = 900;
       break;
@@ -22,9 +22,9 @@ function setFont(icon, size) {
       fontWeight = 400;
       break;
     default:
-      console.error('Unkown icon style: ' + icon.style);
+      console.error('Unkown icon style: ' + icon.st);
   }
-  ctx.font = fontWeight + ' ' + (icon.max_size * size) / 100 + 'px "Font Awesome 5 Free"';
+  ctx.font = fontWeight + ' ' + (icon.si * size) / 100 + 'px "Font Awesome 5 Free"';
 }
 
 function draw() {
@@ -35,15 +35,15 @@ function draw() {
     setFont(s.icon, s.size);
     ctx.fillStyle = 'rgba(0, 0, 0, 1)';
     ctx.globalCompositeOperation = 'destination-out';
-    ctx.fillText(s.icon.unicode, canvasSize / 2, canvasSize / 2);
+    ctx.fillText(s.icon.uc, canvasSize / 2, canvasSize / 2);
     ctx.fillStyle = s.foregroundColor;
     ctx.globalCompositeOperation = 'source-over';
-    ctx.fillText(s.icon.unicode, canvasSize / 2, canvasSize / 2);
+    ctx.fillText(s.icon.uc, canvasSize / 2, canvasSize / 2);
     if (s.stackedSelected) {
       ctx.save();
       setFont(s.stackedIcon, s.stackedSize);
       ctx.globalCompositeOperation = 'xor';
-      ctx.fillText(s.stackedIcon.unicode, canvasSize / 2, canvasSize / 2);
+      ctx.fillText(s.stackedIcon.uc, canvasSize / 2, canvasSize / 2);
       ctx.restore();
     }
     canvasToFavicon(canvas);

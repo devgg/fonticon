@@ -43,20 +43,20 @@ for i, (icon_name, icon) in enumerate(icons_json.items()):
                 style, font = get_style(style)
                 uni = ('\\u' + icon['unicode']).encode().decode('unicode-escape')
                 result_icon = {
-                    'idx': idx,
+                    'ix': idx,
                     'id': icon_name,
-                    'style': style,
-                    'unicode': uni,
-                    'max_size': get_max_size(font, uni),
+                    'st': style,
+                    'uc': uni,
+                    'si': get_max_size(font, uni),
                 }
                 search_terms = icon['search']['terms']
                 if search_terms:
-                    result_icon['search_terms'] = search_terms
+                    result_icon['se'] = search_terms
                 result.append(result_icon)
                 idx += 1
     print('{0}/{1} icons processed.'.format(i + 1, len(icons_json)), end="\r")
 
 js_icons = 'export default ' + json.dumps(result, separators=(',', ':'))
 
-with open('src/generated/icons.js', 'w') as f:
+with open('src/js/generated/icons.js', 'w') as f:
     f.write(js_icons)

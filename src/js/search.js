@@ -7,14 +7,14 @@ function initSearch() {
   const $right = $('#right');
   const icon_map = icons.map;
   const options = {
-    id: 'idx',
+    id: 'ix',
     shouldSort: true,
     threshold: 0.3,
     location: 0,
     distance: 100,
     maxPatternLength: 32,
     minMatchCharLength: 1,
-    keys: ['id', 'search_terms'],
+    keys: ['id', 'se'],
   };
   const fuse = new Fuse(icons, options);
   const result_map = new Array(icons.length);
@@ -33,7 +33,7 @@ function initSearch() {
     $right
       .children()
       .filter(function(index, element) {
-        return query == '' || result_map[$(element).data('idx')] != -1;
+        return query == '' || result_map[$(element).data('ix')] != -1;
       })
       .show();
   }
@@ -54,7 +54,7 @@ function initSearch() {
     } else if (result.length > 0) {
       tinysort($right.children(), {
         sortFunction: function(a, b) {
-          return result_map[$(a.elm).data('idx')] - result_map[$(b.elm).data('idx')];
+          return result_map[$(a.elm).data('ix')] - result_map[$(b.elm).data('ix')];
         },
       });
     }

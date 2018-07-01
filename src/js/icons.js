@@ -7,11 +7,11 @@ function initIcons(state) {
   $.each(icons, (index, icon) => {
     const $iconOuter = $('<div>').addClass('icon_outer');
 
-    const styleClass = icon.style + ' fa-' + icon.id;
+    const styleClass = icon.st + ' fa-' + icon.id;
 
     const $icon = $('<div>')
       .addClass('icon hover')
-      .data('idx', icon.idx)
+      .data('ix', icon.ix)
       .append($('<i>').addClass(styleClass));
 
     $icon.append(
@@ -24,7 +24,7 @@ function initIcons(state) {
   });
 
   $('.icon').on('click touchstart', event => {
-    const icon = icons[$(event.currentTarget).data('idx')];
+    const icon = icons[$(event.currentTarget).data('ix')];
     if (!state.stackedSelected) {
       state.icon = icon;
     } else {
