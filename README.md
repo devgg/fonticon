@@ -6,9 +6,8 @@ Tool for creating favicons and images from [Font Awesome](http://fontawesome.io/
 
 * Latest Font Awesome 5.0.13
 * Preview of favicon live in browser
-* Sizing of the icon
+* Both .ico and .png exports
 * Transparent icon and background
-* Huge image size (icon can be as detailed as you want)
 * Fuzzy search and keyword search
 * Support stacked icons
 
@@ -40,4 +39,4 @@ npm run start:dev
 
 This will start a [webpack-dev-server](https://github.com/webpack/webpack-dev-server). While the server is running you can go to [localhost:8080](http://localhost:8080) where all your changes will be reflected as soon as you save a file.
 
-During your commit all changed code will be formated with [prettier](https://prettier.io/) so no need to worry about formating 😄🎉.
+During your commit all changed code will be formated with [Prettier](https://prettier.io/) so no need to worry about formating 😄🎉.
