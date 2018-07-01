@@ -4,7 +4,6 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  //mode: 'production',
   mode: 'development',
   entry: { index: './src/js/index.js', ga: './src/js/lib/ga.js' },
   output: {
