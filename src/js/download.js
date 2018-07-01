@@ -4,7 +4,7 @@ import _ from 'blueimp-canvas-to-blob';
 function initDownload() {
   const createFaviconUrl = 'https://fonticon-207412.appspot.com/';
   const $download = $('#download');
-  const $fileFormat = $('#file_format_text');
+  const $fileFormat = $('#file_format');
   const $fileFormatText = $('#file_format_text');
   const $downloadIframe = $('#download_iframe');
   const $interactiveDownload = $('#interactive_download');
