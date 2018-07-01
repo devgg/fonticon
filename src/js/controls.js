@@ -57,7 +57,7 @@ function initColors(state) {
     move: updateColor.bind(updateColor, colors.background, true, true),
   });
 
-  $colorText.on('input', updateColor.bind(updateColor, $color, $colorText, false, true));
+  $colorText.on('input', updateColor.bind(updateColor, colors.foreground, false, true));
   $backgroundColorText.on('input', updateColor.bind(updateColor, colors.background, false, true));
 
   updateColor(colors.foreground, true, false);
