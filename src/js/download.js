@@ -1,4 +1,4 @@
-import saveAs from 'file-saver';
+import { saveAs } from 'file-saver';
 import _ from 'blueimp-canvas-to-blob';
 
 function initDownload() {
