@@ -11,19 +11,19 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --display-modules",
     "start:dev": "webpack-dev-server",
-    "build:prod": "webpack --mode=production"
+    "build:prod": "webpack --display-modules --mode=production"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/devgg/FontIcon.git"
+    "url": "git+https://github.com/devgg/fonticon.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/devgg/FontIcon/issues"
+    "url": "https://github.com/devgg/fonticon/issues"
   },
-  "homepage": "https://github.com/devgg/FontIcon#readme",
+  "homepage": "https://github.com/devgg/fonticon#readme",
   "devDependencies": {
     "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
     "css-loader": "^0.28.11",

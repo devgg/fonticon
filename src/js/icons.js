@@ -5,7 +5,9 @@ function initIcons(state) {
   const $right = $('#right');
 
   $.each(icons, (index, icon) => {
-    const $iconOuter = $('<div>').addClass('icon_outer');
+    const $iconOuter = $('<div>')
+      .addClass('icon_outer')
+      .data('ix', icon.ix);
 
     const styleClass = icon.st + ' fa-' + icon.id;
 

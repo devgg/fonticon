@@ -5,7 +5,6 @@ import icons from './generated/icons.js';
 function initSearch() {
   const $search = $('#search');
   const $right = $('#right');
-  const icon_map = icons.map;
   const options = {
     id: 'ix',
     shouldSort: true,
@@ -17,78 +16,50 @@ function initSearch() {
     keys: ['id', 'se'],
   };
   const fuse = new Fuse(icons, options);
-  const result_map = new Array(icons.length);
 
-  function createResultMap(result) {
-    for (let i = 0; i < result_map.length; i++) {
-      result_map[i] = -1;
-    }
-    for (let i = 0; i < result.length; i++) {
-      result_map[result[i]] = i;
-    }
-  }
+  $search.on('input', () => {
+    setTimeout(() => {
+      const query = $search.get(0).value;
+      const result = fuse.search(query);
 
-  function filterIcons(query) {
-    $right.children().hide();
-    $right
-      .children()
-      .filter(function(index, element) {
-        return query == '' || result_map[$(element).data('ix')] != -1;
-      })
-      .show();
-  }
+      let $childrenToShow = $right.children();
+      if (query !== '') {
+        $childrenToShow.css('display', 'none');
+        $childrenToShow = $right.children().filter((index, element) => {
+          return (
+            result.indexOf(
+              $(element)
+                .data('ix')
+                .toString(),
+            ) !== -1
+          );
+        });
+        $childrenToShow.css('display', 'flex');
 
-  $search.on('input', function() {
-    console.time('someFunction');
-    console.time('search');
-    const query = $search.get(0).value;
-    const result = fuse.search(query);
-    createResultMap(result);
-    console.timeEnd('search');
-
-    console.time('filter');
-    filterIcons(query, result);
-    console.timeEnd('filter');
-    if (result.length == 0 && query == '') {
-      tinysort($right.children());
-    } else if (result.length > 0) {
-      tinysort($right.children(), {
-        sortFunction: function(a, b) {
-          return result_map[$(a.elm).data('ix')] - result_map[$(b.elm).data('ix')];
-        },
-      });
-    }
-    console.timeEnd('someFunction');
+        if ($childrenToShow.length > 0) {
+          tinysort($childrenToShow, {
+            sortFunction: (a, b) => {
+              return (
+                result.indexOf(
+                  $(a.elm)
+                    .data('ix')
+                    .toString(),
+                ) -
+                result.indexOf(
+                  $(b.elm)
+                    .data('ix')
+                    .toString(),
+                )
+              );
+            },
+          });
+        }
+      } else {
+        $childrenToShow.css('display', 'flex');
+        tinysort($childrenToShow);
+      }
+    }, 0);
   });
-
-  //  function filterIcons(query, result) {
-  //    $right.children().hide();
-  //    $right
-  //      .children()
-  //      .filter(function(index, element) {
-  //        return query == '' || result.indexOf($(element).data('id')) != -1;
-  //      })
-  //      .show();
-  //  }
-  //
-  //  $search.on('input', function() {
-  //    console.time('someFunction');
-  //    const query = $search.get(0).value;
-  //    const result = fuse.search(query);
-  //    //createResultMap(result);
-  //
-  //    filterIcons(query, result);
-  //    if (result.length == 0 && query == '') {
-  //      tinysort($right.children());
-  //    } else if (result.length > 0) {
-  //      tinysort($right.children(), {
-  //        sortFunction: function(a, b) {
-  //          return result.indexOf($(a.elm).data('id')) - result.indexOf($(b.elm).data('id'));
-  //        },
-  //      });
-  //    }
-  //    console.timeEnd('someFunction');
-  //  });
 }
 
 export { initSearch };
