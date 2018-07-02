@@ -13,10 +13,6 @@
     max-width: 100%;
   }
 
-  #footer {
-    display: none;
-  }
-
   #colors {
     width: 80vw;
     justify-content: center;
@@ -47,6 +43,14 @@
   #download_container {
     width: 80vw;
     margin-bottom: 10px;
+  }
+
+  #download {
+    width: 50%;
+  }
+
+  #file_format {
+    width: 50%;
   }
 
   input {
