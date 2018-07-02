@@ -120,7 +120,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 70%;
   border-radius: 5px 0 0 5px;
   border-right-color: white;
   -moz-user-select: none;
@@ -162,7 +162,7 @@ body {
 #file_format {
   display: flex;
   align-items: center;
-  width: 20%;
+  width: 30%;
   border-radius: 0 5px 5px 0;
   -moz-user-select: none;
   -khtml-user-select: none;
