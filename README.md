@@ -10,7 +10,7 @@ Tool for creating favicons and images from [Font Awesome](http://fontawesome.io/
 
 * Latest Font Awesome 5.0.13
 * Preview of favicon live in browser
-* Both .ico and .png exports
+* Download favicons with the full power of [realfavicongenerator.net](https://realfavicongenerator.net)
 * Transparent icon and background
 * Fuzzy search and keyword search
 * Support stacked icons
