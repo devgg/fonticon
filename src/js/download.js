@@ -107,6 +107,10 @@ function initDownload() {
   function generateBase64Picture() {
     return canvas.toDataURL().split(',')[1];
   }
+
+  function downloadFromUrl(url) {
+    $downloadIframe.attr('src', url);
+  }
 }
 
 export { initDownload };
