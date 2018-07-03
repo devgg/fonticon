@@ -3,6 +3,7 @@ node_js:
   - "7"
 
 script: npm run build:prod
+after_deploy: ./node_modules/cloudflare-cli/bin/cfcli purge
 
 deploy:
   provider: pages
