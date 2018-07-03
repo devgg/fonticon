@@ -72,4 +72,22 @@
     justify-content: center;
     max-height: calc(100vh - 60px);
   }
+
+  .underline:before {
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    height: 0px;
+  }
+
+  .hover {
+    -webkit-transform: none !important;
+    transform: none !important;
+  }
+
+  .icon:hover > i,
+  .icon:focus > i,
+  .icon:active > i {
+    -webkit-animation-name: none !important;
+    animation-name: none !important;
+  }
 }
