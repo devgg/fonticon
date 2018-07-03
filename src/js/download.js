@@ -6,7 +6,6 @@ function initDownload() {
   const $download = $('#download');
   const $fileFormat = $('#file_format');
   const $fileFormatText = $('#file_format_text');
-  const $downloadIframe = $('#download_iframe');
   const $interactiveDownload = $('#interactive_download');
   const $interactiveDownloadInput = $('#interactive_download_input');
 
@@ -109,7 +108,7 @@ function initDownload() {
   }
 
   function downloadFromUrl(url) {
-    $downloadIframe.attr('src', url);
+    window.open(url, '_blank');
   }
 }
 
