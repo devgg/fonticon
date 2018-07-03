@@ -200,31 +200,6 @@ input:focus {
   box-shadow: 0 0 7px #ff3860;
 }
 
-input[type='checkbox'] {
-  display: inline-block;
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  visibility: hidden;
-  font-size: 1.3em;
-  padding: 0;
-  margin-top: 0;
-  margin-left: 0;
-  margin-bottom: 0;
-}
-
-input[type='checkbox']:before {
-  content: '\f0c8';
-  visibility: visible;
-}
-
-input[type='checkbox']:checked:before {
-  content: '\f14a';
-}
-
 #size,
 #stacked_size {
   padding-left: 0;
@@ -338,14 +313,14 @@ input[type='checkbox']:checked:before {
   height: 30px;
 }
 
-.stack_input {
+#stack_input {
   display: flex;
   align-items: center;
+  color: #ff3860;
 }
 
-.stack_input label {
-  color: #ff3860;
-  padding: 5px 10px 5px 10px;
+#stack_input div {
+  padding: 5px;
   font-size: 14px;
   cursor: pointer;
   -moz-user-select: none;
@@ -353,11 +328,12 @@ input[type='checkbox']:checked:before {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 #stacked {
   cursor: pointer;
+  font-size: 16px;
 }
 
 #stacked_size {

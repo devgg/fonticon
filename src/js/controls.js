@@ -69,6 +69,7 @@ function initControls(state) {
   const $size = $('#size');
   const $stackedSize = $('#stacked_size');
   const $stacked = $('#stacked');
+  const $stackInput = $('#stack_input');
 
   $size.on('input', () => {
     state.size = $size.val();
@@ -80,9 +81,10 @@ function initControls(state) {
     draw();
   });
 
-  $stacked.click(() => {
+  $stackInput.click(() => {
     state.stackedSelected = !state.stackedSelected;
     state.stackedSelected ? $stackedSize.show() : $stackedSize.hide();
+    $stacked.toggleClass('fa-square fa-check-square');
     draw();
   });
 
