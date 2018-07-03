@@ -1,5 +1,7 @@
 # [fonticon](http://gauger.io/fonticon)
 
+[![Build Status](https://travis-ci.com/devgg/fonticon.svg?branch=master)](https://travis-ci.com/devgg/fonticon)
+
 Tool for creating favicons and images from [Font Awesome](http://fontawesome.io/) icons. The generated icon can be previewed live in the browser.
 
 <p align="center">
