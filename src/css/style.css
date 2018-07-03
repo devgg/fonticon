@@ -176,8 +176,8 @@ body {
 }
 
 #file_format > i {
-  margin-right: 10px;
   font-size: 20px;
+  margin-right: 10px;
 }
 
 input {
@@ -211,7 +211,6 @@ input[type='checkbox'] {
   visibility: hidden;
   font-size: 1.3em;
   padding: 0;
-  margin-right: 10px;
   margin-top: 0;
   margin-left: 0;
   margin-bottom: 0;
@@ -342,12 +341,11 @@ input[type='checkbox']:checked:before {
 .stack_input {
   display: flex;
   align-items: center;
-  cursor: pointer;
 }
 
 .stack_input label {
   color: #ff3860;
-  padding-right: 15px;
+  padding: 5px 10px 5px 10px;
   font-size: 14px;
   cursor: pointer;
   -moz-user-select: none;
@@ -355,6 +353,7 @@ input[type='checkbox']:checked:before {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  margin-right: 15px;
 }
 
 #stacked {
