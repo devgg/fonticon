@@ -25,14 +25,19 @@ function initIcons(state) {
     $right.append($iconOuter);
   });
 
-  $('.icon').on('click touchstart', event => {
-    const icon = icons[$(event.currentTarget).data('ix')];
-    if (!state.stackedSelected) {
+  function iconClicked() {
+    const icon = icons[$(this).data('ix')];
+    if (!state.stackedselected) {
       state.icon = icon;
     } else {
-      state.stackedIcon = icon;
+      state.stackedicon = icon;
     }
     draw();
+  }
+
+  $('.icon').each((index, elem) => {
+    elem.addEventListener('click', iconClicked, { passive: true });
+    elem.addEventListener('touchstart', iconClicked, { passive: true });
   });
 }
 
