@@ -71,6 +71,7 @@
     width: 100%;
     justify-content: center;
     max-height: calc(100vh - 60px);
+    -webkit-overflow-scrolling: touch;
   }
 
   .underline:before {
