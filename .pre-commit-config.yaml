@@ -1,0 +1,11 @@
+repos:
+  - repo: https://github.com/prettier/prettier
+    # Use old version until https://github.com/prettier/prettier/issues/4637 is fixed
+    rev: 1.12.1
+    hooks:
+    - id: prettier
+  - repo: https://github.com/ambv/black
+    rev: stable
+    hooks:
+    - id: black
+      language_version: python3.6
