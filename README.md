@@ -1,6 +1,6 @@
 # [fonticon](http://gauger.io/fonticon)
 
-[![Build Status](https://travis-ci.com/devgg/fonticon.svg?branch=master)](https://travis-ci.com/devgg/fonticon) 
+[![Build Status](https://travis-ci.com/devgg/fonticon.svg?branch=master)](https://travis-ci.com/devgg/fonticon)
 ![License](https://img.shields.io/github/license/devgg/fonticon.svg)
 
 Tool for creating favicons and images from [Font Awesome](http://fontawesome.io/) icons. The generated icon can be previewed live in the browser.
@@ -20,12 +20,14 @@ Tool for creating favicons and images from [Font Awesome](http://fontawesome.io/
 
 # Contributing
 
-To contribute fork the repository and execute 
+To contribute fork the repository and execute
 
 ```shell
 git clone <YOUR_FORK>
 cd fonticon
 npm install
+# Install pre-commit hooks for automatic code formatting (requires python to be installed).
+npm run pre-commit
 ```
 
 This installs all the necessary dependencies. Now you can build the code by running:
@@ -36,7 +38,7 @@ npm run build
 
 Afterwards the `index.html` and other static assets can be found in the `dist` directory.
 
-Alternatively you can run: 
+Alternatively you can run:
 
 ```shell
 npm run start:dev
