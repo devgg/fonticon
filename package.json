@@ -1,8 +1,7 @@
 {
   "name": "fonticon",
   "version": "1.0.0",
-  "description":
-    "Tool for creating favicons and images from [Font Awesome](http://fontawesome.io/) icons. The generated icon can be previewed live in the browser.",
+  "description": "Tool for creating favicons and images from [Font Awesome](http://fontawesome.io/) icons. The generated icon can be previewed live in the browser.",
   "private": true,
   "directories": {
     "lib": "src",
@@ -19,7 +18,12 @@
     "type": "git",
     "url": "git+https://github.com/devgg/fonticon.git"
   },
-  "keywords": ["favicon", "Font Awesome", "icon", "fonticon"],
+  "keywords": [
+    "favicon",
+    "Font Awesome",
+    "icon",
+    "fonticon"
+  ],
   "author": "Florian Gauger",
   "license": "MIT",
   "bugs": {

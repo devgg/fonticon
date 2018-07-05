@@ -9,7 +9,7 @@ import tempfile
 
 from PIL import ImageFont
 
-css_url = "https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+css_url = "https://use.fontawesome.com/releases/v5.2.0/css/all.css"
 icons_json_url = (
     "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/advanced-options/metadata/icons.json"
 )

@@ -6,13 +6,17 @@ const c = {
   canvasSize: 1024,
 };
 
+const heart_icon = icons.find(icon => {
+  return icon.id === 'heart' && icon.st === 'fas';
+});
+
 const s = {
   foregroundColor: '#345334',
   backgroundColor: '#345334',
   size: 85,
   stackedSize: 60,
-  icon: icons[432],
-  stackedIcon: icons[432],
+  icon: heart_icon,
+  stackedIcon: heart_icon,
   stackedSelected: false,
 };
 
