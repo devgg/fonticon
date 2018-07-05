@@ -46,4 +46,4 @@ npm run start:dev
 
 This will start a [webpack-dev-server](https://github.com/webpack/webpack-dev-server). While the server is running you can go to [localhost:8080](http://localhost:8080) where all your changes will be reflected as soon as you save a file.
 
-During your commit all changed code will be formated with [Prettier](https://prettier.io/) so no need to worry about formating 😄🎉.
+During your commit all changed code will be formated with [Prettier](https://prettier.io/) and [black](https://github.com/ambv/black) so no need to worry about formating 😄🎉.
