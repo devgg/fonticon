@@ -27,10 +27,10 @@ function initIcons(state) {
 
   function iconClicked() {
     const icon = icons[$(this).data('ix')];
-    if (!state.stackedselected) {
+    if (!state.stackedSelected) {
       state.icon = icon;
     } else {
-      state.stackedicon = icon;
+      state.stackedIcon = icon;
     }
     draw();
   }
