@@ -9,10 +9,8 @@ import tempfile
 
 from PIL import ImageFont
 
-css_url = "https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-icons_json_url = (
-    "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/advanced-options/metadata/icons.json"
-)
+css_url = "https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+icons_json_url = "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/metadata/icons.json"
 
 
 def load_fonts(css_url):
