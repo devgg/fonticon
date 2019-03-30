@@ -19,7 +19,11 @@ function setFont(icon, size) {
       fontWeight = 900;
       break;
     case 'far':
+    case 'fab':
       fontWeight = 400;
+      break;
+    case 'fal':
+      fontWeight = 300;
       break;
     default:
       console.error('Unkown icon style: ' + icon.st);

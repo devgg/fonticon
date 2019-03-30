@@ -1,10 +1,12 @@
 import icons from './generated/icons.js';
 import { draw } from './draw.js';
 
-function initIcons(state) {
+function initIcons(state, enablePro) {
   const $right = $('#right');
+  $right.empty();
 
   $.each(icons, (index, icon) => {
+    if (!enablePro && icon.pr == 't') return;
     const $iconOuter = $('<div>')
       .addClass('icon_outer')
       .data('ix', icon.ix);

@@ -10,14 +10,13 @@ from git import Repo
 
 from PIL import ImageFont
 
-FONTAWESOME_GIT_URL = "git@github.com:FortAwesome/Font-Awesome.git"
+FONTAWESOME_GIT_URL = "git@github.com:FortAwesome/Font-Awesome-Pro.git"
+OUTPUT_ICONS_PATH = "src/js/generated/icons.js"
 
 
-def get_style(style):
-    if style == "solid":
-        return "fas"
-    elif style == "regular":
-        return "far"
+def get_font(fonts, style):
+    if style in fonts.keys():
+        return fonts[style]
     else:
         print("Warning: style {0} unkown.".format(style))
 
@@ -42,33 +41,49 @@ def get_max_size(font, icon):
     return font_size
 
 
-with tempfile.TemporaryDirectory() as repo_dir:
-    Repo.clone_from(FONTAWESOME_GIT_URL, repo_dir)
-    font_solid_path = repo_dir + "/webfonts/fa-solid-900.woff"
-    font_regular_path = repo_dir + "/webfonts/fa-regular-400.woff"
+def load_icons(repo_url, output_path, allow_brands):
+    with tempfile.TemporaryDirectory() as repo_dir:
+        Repo.clone_from(repo_url, repo_dir)
+        fonts = {
+            "brands": {"path": repo_dir + "/webfonts/fa-brands-400.woff", "style": "fab"},
+            "light": {"path": repo_dir + "/webfonts/fa-light-300.woff", "style": "fal"},
+            "regular": {"path": repo_dir + "/webfonts/fa-regular-400.woff", "style": "far"},
+            "solid": {"path": repo_dir + "/webfonts/fa-solid-900.woff", "style": "fas"},
+        }
 
-    with open(repo_dir + "/metadata/icons.json") as f:
-        icons_json = json.load(f)
+        with open(repo_dir + "/metadata/icons.json") as f:
+            icons_json = json.load(f)
 
-    result = []
-    idx = 0
-    for i, (icon_name, icon) in enumerate(icons_json.items()):
-        if icon_name != "font-awesome-logo-full":
-            for style in icon["styles"]:
-                if style != "brands":
-                    style = get_style(style)
-                    font = font_solid_path if style == "fas" else font_regular_path
+        result = []
+        idx = 0
+        for i, (icon_name, icon) in enumerate(icons_json.items()):
+            if icon_name != "font-awesome-logo-full":
+                for style in icon["styles"]:
+                    if allow_brands or style != "brands":
+                        font = get_font(fonts, style)
 
-                    uni = ("\\u" + icon["unicode"]).encode().decode("unicode-escape")
-                    result_icon = {"ix": idx, "id": icon_name, "st": style, "uc": uni, "si": get_max_size(font, uni)}
-                    search_terms = icon["search"]["terms"]
-                    if search_terms:
-                        result_icon["se"] = search_terms
-                    result.append(result_icon)
-                    idx += 1
-        print("{0}/{1} icons processed.".format(i + 1, len(icons_json)), end="\r")
+                        pr = "f" if style in icon["free"] else "t"
+                        uni = ("\\u" + icon["unicode"]).encode().decode("unicode-escape")
+                        result_icon = {
+                            "ix": idx,
+                            "id": icon_name,
+                            "st": font["style"],
+                            "pr": pr,
+                            "uc": uni,
+                            "si": get_max_size(font["path"], uni),
+                        }
+                        search_terms = icon["search"]["terms"]
+                        if search_terms:
+                            result_icon["se"] = search_terms
+                        result.append(result_icon)
+                        idx += 1
+            print("{0}/{1} icons processed.".format(i + 1, len(icons_json)), end="\r")
 
-    js_icons = "export default " + json.dumps(result, separators=(",", ":"))
+        print("{0}/{1} icons processed.".format(len(icons_json), len(icons_json)))
+        js_icons = "export default " + json.dumps(result, separators=(",", ":"))
 
-    with open("src/js/generated/icons.js", "w") as f:
-        f.write(js_icons)
+        with open(output_path, "w") as f:
+            f.write(js_icons)
+
+
+load_icons(FONTAWESOME_PRO_GIT_URL, OUTPUT_PRO_ICONS_PATH, True)

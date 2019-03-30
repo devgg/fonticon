@@ -12,10 +12,14 @@ import './../css/mobile.css';
 
 $(window).on('load', function() {
   initState();
-  initIcons(s);
+  initIcons(s, false);
   initSearch();
   initDownload();
   initControls(s);
   initDraw(c.canvas, c.ctx, c.canvasSize, s);
   setTimeout(draw, 1000);
 });
+
+window.enableFAPro = function() {
+  initIcons(s, true);
+};
