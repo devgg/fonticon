@@ -91,4 +91,8 @@
     -webkit-animation-name: none !important;
     animation-name: none !important;
   }
+
+  #footer-announcement {
+    display: hidden;
+  }
 }

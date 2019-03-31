@@ -284,7 +284,7 @@ input:focus {
   background-color: #ff3860;
 }
 
-#footer {
+.footer {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -295,13 +295,13 @@ input:focus {
   font-size: 14px;
 }
 
-#footer > i {
+.footer > i {
   font-size: 17px;
   margin-right: 5px;
   cursor: pointer;
 }
 
-#footer:visited {
+.footer:visited {
   color: #ff3860;
 }
 
