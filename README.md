@@ -30,7 +30,7 @@ You might make yourself legally liable otherwise.
 3. Replace the existing Font Awesome &lt;link&gt; tag with your copied tag.
 4. Execute ```enableFAPro()``` in the developer console.
 5. Do your thing :)
-6. **After you are done remove gauger.io from your list of allowed domains!**
+6. **After you are done, remove gauger.io from your list of allowed domains!**
 
 <details><summary>Show detailed description</summary>
 1. Add <b>gauger.io</b> as your Font Awesome Pro domain (<a href="https://fontawesome.com/start">link</a>) and copy the resulting webfont <link> tag.
@@ -45,7 +45,7 @@ You might make yourself legally liable otherwise.
 <p align="center">
   <img src="https://user-images.githubusercontent.com/8250067/55276386-8f868880-52f3-11e9-9ee8-1e3cc06c6e11.png">
 </p>
-6. <b>After you are done remove gauger.io from your list of allowed domains!</b>
+6. <b>After you are done, remove gauger.io from your list of allowed domains!</b>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/8250067/55287347-f6657980-53a7-11e9-9dc9-1ca605dfaa36.png">
 </p>
