@@ -1,12 +1,11 @@
 repos:
   - repo: https://github.com/prettier/prettier
-    rev: "1.14.0"
+    rev: '1.16.4'
     hooks:
-    - id: prettier
-      args: [config ./.prettierrc]
-      exclude: ".*.html"
+      - id: prettier
+        args: [config ./.prettierrc]
   - repo: https://github.com/ambv/black
     rev: stable
     hooks:
-    - id: black
-      language_version: python3.6
+      - id: black
+        language_version: python3.6
