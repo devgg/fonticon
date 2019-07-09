@@ -86,4 +86,4 @@ def load_icons(repo_url, output_path, allow_brands):
             f.write(js_icons)
 
 
-load_icons(FONTAWESOME_PRO_GIT_URL, OUTPUT_PRO_ICONS_PATH, True)
+load_icons(FONTAWESOME_GIT_URL, OUTPUT_ICONS_PATH, True)

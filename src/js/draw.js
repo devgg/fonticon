@@ -14,13 +14,17 @@ function initDraw(canvas_, ctx_, canvasSize_, state) {
 
 function setFont(icon, size) {
   let fontWeight = 0;
+  let fontSuffix = 'Free';
   switch (icon.st) {
     case 'fas':
       fontWeight = 900;
       break;
     case 'far':
+      fontWeight = 400;
+      break;
     case 'fab':
       fontWeight = 400;
+      fontSuffix = 'Brands';
       break;
     case 'fal':
       fontWeight = 300;
@@ -28,7 +32,7 @@ function setFont(icon, size) {
     default:
       console.error('Unkown icon style: ' + icon.st);
   }
-  ctx.font = fontWeight + ' ' + (icon.si * size) / 100 + 'px "Font Awesome 5 Free"';
+  ctx.font = fontWeight + ' ' + (icon.si * size) / 100 + 'px "Font Awesome 5 ' + fontSuffix + '"';
 }
 
 function draw() {
