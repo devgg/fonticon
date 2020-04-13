@@ -10,7 +10,7 @@ from git import Repo
 
 from PIL import ImageFont
 
-FONTAWESOME_GIT_URL = "git@github.com:FortAwesome/Font-Awesome-Pro.git"
+FONTAWESOME_GIT_URL = "git@github.com:FortAwesome/Font-Awesome.git"
 OUTPUT_ICONS_PATH = "src/js/generated/icons.js"
 
 
