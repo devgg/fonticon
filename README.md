@@ -10,16 +10,18 @@ Tool for creating favicons and images from [Font Awesome](http://fontawesome.io/
 </p>
 
 # Features
-- Latest Font Awesome 5.8.1
+
+- Latest Font Awesome 5.13.0
 - Preview of favicon live in browser
 - Download favicons with all features of [realfavicongenerator.net](https://realfavicongenerator.net)
 - Color icon and background by specifying any valid [TinyColor](https://github.com/bgrins/TinyColor#accepted-string-input) value
-- Font Awesome Pro support 
+- Font Awesome Pro support
 - Transparent icon and background
 - Fuzzy search and keyword search
 - Support stacked icons
 
 # Font Awesome Pro
+
 You can easily use your Font Awesome Pro purchase with fonticon!
 
 Note: **DO NOT FORGET TO EXECUTE THE LAST STEP!**  
@@ -28,7 +30,7 @@ You might make yourself legally liable otherwise.
 1. Add **gauger.io** as your Font Awesome Pro domain ([link](https://fontawesome.com/start)) and copy the resulting webfont <link> tag.
 2. Navigate to [gauger.io/fonticon](http://gauger.io/fonticon) and open the developer tools.
 3. Replace the existing Font Awesome &lt;link&gt; tag with your copied tag.
-4. Execute ```enableFAPro()``` in the developer console.
+4. Execute `enableFAPro()` in the developer console.
 5. Do your thing :)
 6. **After you are done, remove gauger.io from your list of allowed domains!**
 
@@ -49,12 +51,11 @@ You might make yourself legally liable otherwise.
 <p align="center">
   <img src="https://user-images.githubusercontent.com/8250067/55287347-f6657980-53a7-11e9-9dc9-1ca605dfaa36.png">
 </p>
-  
-  
+
 </details>
 
-
 # Contributing
+
 To contribute fork the repository and execute
 
 ```shell
