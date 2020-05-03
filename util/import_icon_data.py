@@ -10,7 +10,7 @@ from git import Repo
 
 from PIL import ImageFont
 
-FONTAWESOME_GIT_URL = "git@github.com:FortAwesome/Font-Awesome.git"
+FONTAWESOME_GIT_URL = "git@github.com:ngdanghau/fontawesome-pro.git"
 OUTPUT_ICONS_PATH = "src/js/generated/icons.js"
 
 
@@ -45,13 +45,14 @@ def load_icons(repo_url, output_path, allow_brands):
     with tempfile.TemporaryDirectory() as repo_dir:
         Repo.clone_from(repo_url, repo_dir)
         fonts = {
-            "brands": {"path": repo_dir + "/webfonts/fa-brands-400.woff", "style": "fab"},
-            "light": {"path": repo_dir + "/webfonts/fa-light-300.woff", "style": "fal"},
-            "regular": {"path": repo_dir + "/webfonts/fa-regular-400.woff", "style": "far"},
-            "solid": {"path": repo_dir + "/webfonts/fa-solid-900.woff", "style": "fas"},
+            "brands": {"path": repo_dir + "/web/webfonts/fa-brands-400.woff", "style": "fab"},
+            "light": {"path": repo_dir + "/web/webfonts/fa-light-300.woff", "style": "fal"},
+            "regular": {"path": repo_dir + "/web/webfonts/fa-regular-400.woff", "style": "far"},
+            "solid": {"path": repo_dir + "/web/webfonts/fa-solid-900.woff", "style": "fas"},
+            "duotone": {"path": repo_dir + "/web/webfonts/fa-duotone-900.woff", "style": "fad"},
         }
 
-        with open(repo_dir + "/metadata/icons.json") as f:
+        with open(repo_dir + "/web/metadata/icons.json") as f:
             icons_json = json.load(f)
 
         result = []
