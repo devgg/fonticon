@@ -11,7 +11,7 @@ Tool for creating favicons and images from [Font Awesome](http://fontawesome.io/
 
 # Features
 
-- Latest Font Awesome 5.13.0
+- Latest Font Awesome 5.14.0
 - Preview of favicon live in browser
 - Download favicons with all features of [realfavicongenerator.net](https://realfavicongenerator.net)
 - Color icon and background by specifying any valid [TinyColor](https://github.com/bgrins/TinyColor#accepted-string-input) value
