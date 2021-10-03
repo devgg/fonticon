@@ -19,4 +19,4 @@ jobs:
           folder: dist
           
       - name: purge
-        run: ./node_modules/cloudflare-cli/bin/cfcli -d secrets.CF_API_DOMAIN -k CF_API_TOKEN purge
+        run: ./node_modules/cloudflare-cli/bin/cfcli -d ${{ secrets.CF_API_DOMAIN }} -k ${{ secrets.CF_API_PURGE_TOKEN }} purge
