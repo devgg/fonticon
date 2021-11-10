@@ -1,0 +1,22 @@
+name: build & deploy
+on: [push]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout 🛎️
+        uses: actions/checkout@v2.3.1
+
+      - name: install & build 🔧
+        run: |
+          npm install
+          npm run build:prod
+
+      - name: deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: dist
+          
+      - name: purge
+        run: ./node_modules/cloudflare-cli/bin/cfcli -e ${{ secrets.CF_API_EMAIL }} -d ${{ secrets.CF_API_DOMAIN }} -k ${{ secrets.CF_API_KEY }} purge

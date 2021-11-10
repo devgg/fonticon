@@ -1,6 +1,6 @@
 # [fonticon](http://gauger.io/fonticon)
 
-[![Build Status](https://travis-ci.com/devgg/fonticon.svg?branch=master)](https://travis-ci.com/devgg/fonticon)
+![Build Status](https://github.com/devgg/contrib/actions/workflows/deploy.yml/badge.svg)
 ![License](https://img.shields.io/github/license/devgg/fonticon.svg)
 
 Tool for creating favicons and images from [Font Awesome](http://fontawesome.io/) icons. The generated icon can be previewed live in the browser.
