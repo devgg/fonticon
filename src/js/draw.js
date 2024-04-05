@@ -46,6 +46,7 @@ function draw() {
     ctx.fillText(s.icon.uc, canvasSize / 2, canvasSize / 2);
     ctx.fillStyle = s.foregroundColor;
     ctx.globalCompositeOperation = 'source-over';
+
     ctx.fillText(s.icon.uc, canvasSize / 2, canvasSize / 2);
     if (s.stackedSelected) {
       ctx.save();
