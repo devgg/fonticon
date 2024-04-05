@@ -22,35 +22,20 @@ function initSearch() {
       const query = $search.get(0).value;
       const result = fuse.search(query);
 
+      const map = new Map(result.map((obj, idx) => [obj.item.ix, idx]));
+
       let $childrenToShow = $right.children();
       if (query !== '') {
         $childrenToShow.css('display', 'none');
         $childrenToShow = $right.children().filter((index, element) => {
-          return (
-            result.indexOf(
-              $(element)
-                .data('ix')
-                .toString(),
-            ) !== -1
-          );
+          return map.has($(element).data('ix'));
         });
         $childrenToShow.css('display', 'flex');
 
         if ($childrenToShow.length > 0) {
           tinysort($childrenToShow, {
             sortFunction: (a, b) => {
-              return (
-                result.indexOf(
-                  $(a.elm)
-                    .data('ix')
-                    .toString(),
-                ) -
-                result.indexOf(
-                  $(b.elm)
-                    .data('ix')
-                    .toString(),
-                )
-              );
+              return map.get($(a.elem).data('ix')) - map.get($(b.elem).data('ix'));
             },
           });
         }
