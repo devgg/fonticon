@@ -3,10 +3,10 @@ import icons from './generated/icons.js';
 const c = {
   canvas: undefined,
   ctx: undefined,
-  canvasSize: 1024,
+  canvasSize: 960,
 };
 
-const heart_icon = icons.find(icon => {
+const heart_icon = icons.find((icon) => {
   return icon.id === 'heart' && icon.st === 'fas';
 });
 

@@ -12,12 +12,12 @@ def get_font(fonts, style):
     if style in fonts.keys():
         return fonts[style]
     else:
-        print("Warning: style {0} unkown.".format(style))
+        print(f"Warning: style {style} unkown.")
 
 
 def get_max_size(font, icon):
     font_size = 1200
-    max_size = 1024
+    max_size = 960
     width = max_size + 1
     height = max_size + 1
 
@@ -42,7 +42,7 @@ def get_max_size(font, icon):
 
 def load_icons(repo_url, output_path, allow_brands):
     with tempfile.TemporaryDirectory(delete=False) as repo_dir:
-        print(repo_dir)
+        print(f"writing to: {repo_dir}")
         Repo.clone_from(repo_url, repo_dir)
         fonts = {
             "brands": {"path": repo_dir + "/webfonts/fa-brands-400.woff2", "style": "fab"},
@@ -77,9 +77,9 @@ def load_icons(repo_url, output_path, allow_brands):
                             result_icon["se"] = search_terms
                         result.append(result_icon)
                         idx += 1
-            print("{0}/{1} icons processed.".format(i + 1, len(icons_json)), end="\r")
+            print(f"{i + 1}/{len(icons_json)} icons processed.", end="\r")
 
-        print("{0}/{1} icons processed.".format(len(icons_json), len(icons_json)))
+        print(f"{len(icons_json)}/{len(icons_json)}")
         js_icons = "export default " + json.dumps(result, separators=(",", ":"))
 
         with open(output_path, "w") as f:
